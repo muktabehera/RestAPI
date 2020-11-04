@@ -87,6 +87,8 @@ if __name__ == '__main__':
 # count()	Returns the number of elements with the specified value
    #thislist.count('s')
 # extend()	Add the elements of a list (or any iterable), to the end of the current list
+    # f = ['d','f']
+    # f.extend(['e', 'k'])
 # index()	Returns the index of the first element with the specified value
    # thislist.index('a')
 # insert()	Adds an element at the specified position (index,value)
