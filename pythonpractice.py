@@ -93,11 +93,16 @@ if __name__ == '__main__':
    # thislist.index('a')
 # insert()	Adds an element at the specified position (index,value)
    # thislist.insert(2, 'test')
-# pop()	    Removes the element at the specified position
+# pop()	    Removes the element at the specified position/index
+    #f.pop(0)
 # remove()	Removes the item with the specified value
+    #f.remove('a')
 # reverse()	Reverses the order of the list
-# sort()	Sorts the list
-# del
+    #f.reverse()
+# sort()	Sorts the list in Ascending order
+    #f.sort()
+# del() deletes the list
+    #del(list)
 
 #list to string: ''.join(list)
 # string to list with split words: string.split(" ")
