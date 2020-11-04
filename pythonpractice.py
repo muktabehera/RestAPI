@@ -89,7 +89,7 @@ if __name__ == '__main__':
 # extend()	Add the elements of a list (or any iterable), to the end of the current list
 # index()	Returns the index of the first element with the specified value
    # thislist.index('a')
-# insert()	Adds an element at the specified position
+# insert()	Adds an element at the specified position (index,value)
    # thislist.insert(2, 'test')
 # pop()	    Removes the element at the specified position
 # remove()	Removes the item with the specified value
