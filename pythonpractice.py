@@ -79,20 +79,25 @@ if __name__ == '__main__':
 # res['items']
 
 ##LIST
+# len() length of the list
+    #len(list)
 # append()	Adds an element at the end of the list
-# clear()	Removes all the elements from the list
-# copy()	Returns a copy of the list
-   # thislist = ["apple", "banana", "cherry"]
-   # mylist = list(thislist) *list()
-# count()	Returns the number of elements with the specified value
-   #thislist.count('s')
 # extend()	Add the elements of a list (or any iterable), to the end of the current list
     # f = ['d','f']
     # f.extend(['e', 'k'])
-# index()	Returns the index of the first element with the specified value
-   # thislist.index('a')
 # insert()	Adds an element at the specified position (index,value)
    # thislist.insert(2, 'test')
+# clear()	Removes all the elements from the list
+    #list.clear()
+# copy()	Returns a copy of the list
+    # thislist = ["apple", "banana", "cherry"]
+    # mylist = thislist.copy()
+    #OR
+    # mylist = list(thislist) i.e. list()
+# count()	Returns the number of elements with the specified value
+   #thislist.count('s')
+# index()	Returns the index of the first element with the specified value
+   # thislist.index('a')
 # pop()	    Removes the element at the specified position/index
     #f.pop(0)
 # remove()	Removes the item with the specified value
