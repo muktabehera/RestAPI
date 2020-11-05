@@ -114,7 +114,20 @@ if __name__ == '__main__':
     #a[:3] = [1,2,3]
 
 #list to string: ''.join(list)
+    #list = ['a','b']
+    #string = ''.join(list)
 # string to list with split words: string.split(" ")
+    #s = "sun is bright"
+    #k = s.split(" ")
+# int to list:
+    # x = 123
+    # y = str(123)
+    # z = list(y)
+# string to int:
+    # s = '123'
+    # ints = int(s)
+
+
 # if (string.find(sub_str) == -1): *string.find(sub_str, start, end)
 #         print("NO")
 #     else:
