@@ -82,6 +82,7 @@ if __name__ == '__main__':
 # len() length of the list
     #len(list)
 # append()	Adds an element at the end of the list
+    #list.append('s')
 # extend()	Add the elements of a list (or any iterable), to the end of the current list
     # f = ['d','f']
     # f.extend(['e', 'k'])
