@@ -134,4 +134,12 @@ if __name__ == '__main__':
 #         print("YES")
 #dictionary: sorted(dict)
 
-##
+#Exception handling:::
+# def exceptionhandling():
+#   try:
+        #car = {"make":"bmw", "year": 2000, "model" : "550i"}
+        #print(car["color"])
+#   except:
+        #print("Key not found")
+#   finally:
+        #print("please try again with different key")
