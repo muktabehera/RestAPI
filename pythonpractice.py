@@ -1,3 +1,5 @@
+#Note: https://docs.python.org/3/library/ ( you will find all the standard libraries/module)
+
 def midnum(x):
     l = len(x)
     mid = int((l-1)/2)
@@ -143,3 +145,12 @@ if __name__ == '__main__':
         #print("Key not found")
 #   finally:
         #print("please try again with different key")
+
+
+
+#A simple class:
+# class myname():
+    # def name(self):
+        # print("myname is" + "tony")
+# m = myname()
+# m.name()
