@@ -123,7 +123,7 @@ if __name__ == '__main__':
     #k = s.split(" ")
 # int to list:
     # x = 123
-    # y = str(123)
+    # y = str(x)
     # z = list(y)
 # string to int:
     # s = '123'
@@ -154,3 +154,7 @@ if __name__ == '__main__':
         # print("myname is" + "tony")
 # m = myname()
 # m.name()
+
+# convert a value to a boolean value(contains two values true and false) :
+# a = "dfsfsf"
+# b = bool(a)
