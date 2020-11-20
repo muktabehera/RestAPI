@@ -101,10 +101,11 @@ if __name__ == '__main__':
    #thislist.count('s')
 # index()	Returns the index of the first element with the specified value
    # thislist.index('a')
-# pop()	    Removes the element at the specified position/index
+# pop()	    Pop's out the element at the specified position/index
     #f.pop(0)
-# remove()	Removes the item with the specified value
+# remove()	Removes the item with the specified value from list
     #f.remove('a')
+    #print(f)
 # reverse()	Reverses the order of the list
     #f.reverse()
 # sort()	Sorts the list in Ascending order
@@ -168,3 +169,7 @@ if __name__ == '__main__':
 # s2 = 'hello world now'
 # s1.find('world',2,-2) will search string within 'llo world n', note:index starts with 0. If substring exists returns index else returns -1
 # s1.find('hell',0,10)
+## lower() / upper() , converts string to lower/upper
+# str = 'XYZ'
+# print(str.lower())
+# print(str.upper())
