@@ -92,7 +92,7 @@ if __name__ == '__main__':
    # thislist.insert(2, 'test')
 # clear()	Removes all the elements from the list
     #list.clear()
-# copy()	Returns a copy of the list
+# copy()	Returns a copy of the list or dictionary
     # thislist = ["apple", "banana", "cherry"]
     # mylist = thislist.copy()
     #OR
@@ -121,7 +121,7 @@ if __name__ == '__main__':
     #string = ''.join(list)
 # string to list with split words: string.split(" ")
     #s = "sun is bright"
-    #k = s.split(" ")
+    #k = s.split(" ") or s.split()
 # int to list:
     # x = 123
     # y = str(x)
