@@ -158,3 +158,13 @@ if __name__ == '__main__':
 # convert a value to a boolean value(contains two values true and false) :
 # a = "dfsfsf"
 # b = bool(a)
+
+##String##
+## Replace , str.replace(old, new[, max])
+# s1 = "hello"
+# s1.replace('h','d')
+# s1.replace('ll','just')
+## find , str.find(substring, start, end)
+# s2 = 'hello world now'
+# s1.find('world',2,-2) will search string within 'llo world n', note:index starts with 0. If substring exists returns index else returns -1
+# s1.find('hell',0,10)
