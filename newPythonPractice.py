@@ -84,3 +84,76 @@
 # a = test("rosy","111 e lane")
 # a.print()
 
+## Print a string N times.
+# class test():
+#     def printNtimes(self,str,n):
+#         # str = "testing"
+#         # n = 10
+#         x=0
+#         while x < n:
+#             print(str)
+#             x= x+1
+#
+#         print(str*n)
+#
+# a = test()
+# str1= "hello every one"
+# n1 = 3
+# a.printNtimes(str1,n1)
+
+##Check the memory usage of  an object
+# import sys
+#
+# def size():
+#     d = "ghitm"
+#     print(sys.getsizeof(d))
+# size()
+
+## Find the most frequent/recurring value in a list
+# class test():
+#     def frequestValue(self):
+#         l = ['a','b','c','d','a','a','b','c','e','f']
+#         dict = {}
+#         for x in l:
+#             c = l.count(x)
+#             #append key value pair to dict
+#             dict[x]=c
+#         print(dict) # {'a': 3, 'b': 2, 'c': 2, 'd': 1, 'e': 1, 'f': 1}
+#
+#         # make list of keys from dict , i.e.['a', 'b', 'c', 'd', 'e', 'f']
+#         keys = list(dict.keys())
+#         print(keys)
+#
+#         #make list of values from dict, i.e. [3, 2, 2, 1, 1, 1]
+#         values = list(dict.values())
+#         print(values)
+#
+#         # store it in another list
+#         valueoriginal = list()
+#         for x in values:
+#             valueoriginal.append(x)
+#         print(valueoriginal)
+#
+#         # find the max numbers it occurred
+#         values.sort()
+#         print(values)
+#         maxvalue = values[len(values)-1]
+#         print(maxvalue)
+#
+#         #find index for max value from 'original values list
+#         myindex = valueoriginal.index(maxvalue)
+#         print(myindex)
+#
+#         #find the key having myindex from list 'keys'
+#         answer = keys[myindex]
+#         print(f"the max occurring value is '{answer}'")
+#
+# a = test()
+# a.frequestValue()
+
+
+## Checking whether the two words are anagrams or not[A word can be formed by rearranging the letters of another]
+# ex- cinema, iceman
+
+
+
