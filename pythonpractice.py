@@ -122,6 +122,9 @@ if __name__ == '__main__':
 # string to list with split words: string.split(" ")
     #s = "sun is bright"
     #k = s.split(" ") or s.split()
+# string to list with split char:   list(str)
+    #str = "mom"
+    #list(str) will give result ["m","o","m"]
 # int to list:
     # x = 123
     # y = str(x)
