@@ -39,8 +39,48 @@
 ##Write Python code to check the given sequence is a palindrome or not?
 #mom
 
-class test():
-    def palindrome(self):
-        s = "mom"
-        #convert string to list
-        l = s.split(" ")
+# class test():
+#     def palindrome(self):
+#         s = "MOM"
+#         #convert string to list
+#         l = list(s)
+#         # reverse the list
+#         l.reverse()
+#         # convert it to string
+#         s2 = ''.join(l)
+#         # compare two strings
+#         if s == s2:
+#             print(f"yes {s} is a palindrome")
+#         else:
+#             print(f"No {s} is not a palindrome")
+#
+# a = test()
+# a.palindrome()
+
+##Write Python code to sort a numerical dataset?
+
+# class test():
+#     def sort(self,l):
+#         #l = [1,2,3,4,5,8,1,2,3,4,5]
+#         l.sort()
+#         print(f"the sorted list is {l}")
+#
+# a = test()
+# l = [1,2,3,4,5,8,1,2,3,4,5]
+# a.sort(l)
+
+## converting list into nested list:
+# x = [ "abc","def"]
+# print(list(map(list,x))) # result is [['a', 'b', 'c'], ['d', 'e', 'f']]
+
+## Python class with a constructor
+# class test:
+#     def __init__(self,name,address):
+#         self.name = name
+#         self.address = address
+#     def print(self):
+#         print(f"hello my name is {self.name}, addess is {self.address}")
+#
+# a = test("rosy","111 e lane")
+# a.print()
+
