@@ -166,14 +166,36 @@ if __name__ == '__main__':
 
 ##String##
 ## Replace , str.replace(old, new[, max])
-# s1 = "hello"
-# s1.replace('h','d')
-# s1.replace('ll','just')
+    # s1 = "hello"
+    # s1.replace('h','d')
+    # s1.replace('ll','just')
 ## find , str.find(substring, start, end)
-# s2 = 'hello world now'
-# s1.find('world',2,-2) will search string within 'llo world n', note:index starts with 0. If substring exists returns index else returns -1
-# s1.find('hell',0,10)
+    # s2 = 'hello world now'
+    # s1.find('world',2,-2) will search string within 'llo world n', note:index starts with 0. If substring exists returns index else returns -1
+    # s1.find('hell',0,10)
 ## lower() / upper() , converts string to lower/upper
-# str = 'XYZ'
-# print(str.lower())
-# print(str.upper())
+    # str = 'XYZ'
+    # print(str.lower())
+    # print(str.upper())
+## string reverse using slicing
+    #str = "ajklmnop"
+    #rev = str[: : -1]
+
+##Dictionary
+# Append to a dictionary:
+    #dict = {}
+    #dict["color"]="blue"
+    # print(dict)
+# find keys from dictionary:
+    #dict = {'a':2,'b':3}
+    #for x in dict:
+        #print(x)
+        #OR
+     #dict.keys(), will return dict_keys(['a', 'b'])
+# find values from dictionary:
+    # dict = {'a':2,'b':3}
+    # dict.values() , will return all values i.e. dict_values([2, 3])
+    #OR
+    #dict['a'] , will return value for key 'a'
+# finding key for a particular value in dictionary:
+
