@@ -112,7 +112,8 @@ if __name__ == '__main__':
     #f.sort()
 # del() deletes the list
     #del(list)
-# a = [1,2,3,4,5,6]
+# slicing works for both string and list
+    # a = [1,2,3,4,5,6]
     #a[1:3] i.e. (1 is index, 3 is 3rd place) = [2,3] will be result
     #a[:3] = [1,2,3]
 
