@@ -112,7 +112,7 @@ if __name__ == '__main__':
     #f.sort()
 # del() deletes the list
     #del(list)
-# slicing works for both string and list
+# slicing works for both *string and *list
     # a = [1,2,3,4,5,6]
     #a[1:3] i.e. (1 is index, 3 is 3rd place) = [2,3] will be result
     #a[:3] = [1,2,3]
@@ -180,6 +180,22 @@ if __name__ == '__main__':
 ## string reverse using slicing
     #str = "ajklmnop"
     #rev = str[: : -1]
+## string have also index starting from 0
+    # str = "hello"
+    #str[4] , result will be 'o'
+## strings can be multiplied / Lists can be multiplied
+    # s = "hello"
+    # print(s*2) , will be hellohello
+    # l = [1,2,3]
+    # print(l*2) , will be [1, 2, 3, 1, 2, 3]
+## concating string / concating list
+    # s1 = "hello"
+    # s2 = " world"
+    # print(s1+s2), will be hello world
+    # l1 = ['a','b']
+    # l2 = ['c','d']
+    # print(l1+l2), will be ['a', 'b', 'c', 'd']
+
 
 ##Dictionary
 # Append to a dictionary:
@@ -198,4 +214,10 @@ if __name__ == '__main__':
     #OR
     #dict['a'] , will return value for key 'a'
 # finding key for a particular value in dictionary:
+    # my_dict ={"java":100, "python":112, "c":11}
+    # key_list = list(my_dict.keys())
+    # val_list = list(my_dict.values())
+    # print(key_list[val_list.index(100)])
+    # print(key_list[val_list.index(112)])
+
 

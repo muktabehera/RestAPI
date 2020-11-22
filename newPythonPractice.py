@@ -155,5 +155,59 @@
 ## Checking whether the two words are anagrams or not[A word can be formed by rearranging the letters of another]
 # ex- cinema, iceman
 
+# class test():
+#     def anagram(self):
+#         s1 = "cinema"
+#         s2 = "iceman"
+#         # convert s1 to list
+#         lists1 = list(s1)
+#         print(lists1)
+#
+#         #convert s2 to list
+#         lists2 = list(s2)
+#         print(lists2)
+#
+#         #compare if all values in lists1 is in lists2
+#         if len(lists1)== len(lists2):
+#             for x in lists1:
+#                 if x in lists2:
+#                     pass
+#             print(f"string: {s1}")
+#             print(f"string: {s2}")
+#             print(f"Yes both the strings are anagram")
+#
+#         else:
+#             print("Both strings can not be a anagram")
+#
+# a = test()
+# a.anagram()
+
+#OR
+# class test():
+#     def anagram(self):
+#         s1 = "cinema"
+#         s2 = "iceman"
+#         if len(s1)==len(s2):
+#             for x in s1:
+#                 if x in s2:
+#                     pass
+#             print("yes it is anagram")
+#
+# a = test()
+# a.anagram()
 
 
+##Print the file path of imported modules
+# import os
+# import socket
+# print(os)
+# print(socket)
+
+##What is the difference between tuples and lists in Python?
+    # tuple = ('a','b','c',1,2)
+    # list = ['a','b','c',1,2]
+    # tuple can not be updated, can say it's read only.
+    # 1. Tuple has indexes like list, values can be found using index tuple[2]
+    # 2. Tuple can be sliced, tuple[1:3]
+    # 3. print(tuple * 2)
+    #
