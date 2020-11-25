@@ -210,4 +210,146 @@
     # 1. Tuple has indexes like list, values can be found using index tuple[2]
     # 2. Tuple can be sliced, tuple[1:3]
     # 3. print(tuple * 2)
-    #
+
+## import random
+# d = random.randrange(0,100)  # random Integer from 0 to 99 inclusive
+# d2 = random.randrange(10)    # Integer from 0 to 9 inclusive
+# e = random.random()          # Random float:  0.0 <= x < 1.0
+# f = random.uniform(2.0,9.0)  # Random float:  2.0 <= x < 9.0
+# print(d, d2, e, f)
+
+# ## Shuffle a List:
+# import random
+# l = ["d","e",1,2,3]
+# random.shuffle(l)
+# print(l)
+
+## Ask user to enter a number, and then prints that number, tripled
+# a = input("enter a number:")
+# print(type(a))
+# n = int(a)
+# print(f"Tripled number is {n*3}")
+
+## Create a linked list
+# class Node:
+#     def __init__(self, dataval=None):
+#         self.dataval = dataval
+#         self.nextval = None
+#
+# class SLinkedList:
+#     def __init__(self):
+#         self.headval = None
+#
+#     def listprint(self):
+#         printval = self.headval
+#         while printval is not None:
+#             print (printval.dataval)
+#             printval = printval.nextval
+#
+# list = SLinkedList()
+# list.headval = Node("Mon")
+# e2 = Node("Tue")
+# e3 = Node("Wed")
+#
+# # Link first Node to second node
+# list.headval.nextval = e2
+#
+# # Link second Node to third node
+# e2.nextval = e3
+#
+# list.listprint()
+
+### How Many Numbers Are Smaller Than the Current Number in a list
+# Input: nums = [8,1,2,2,3]
+# Output: [4,0,1,1,3]
+
+# def smallernumbers(l):
+#     r = []
+#
+#     for i in l:
+#         s = 0
+#         for j in l:
+#             if i != j and j < i:
+#                 s = s + 1
+#         r.append(s)
+#
+#     print(r)
+#
+#
+# l = [8, 1, 5, 6, 7]
+# smallernumbers(l)
+
+#
+###Given a string s, the power of the string is the maximum length of a non-empty substring that contains only one unique character.
+# Input: s = "leetcode"
+# Output: 2
+
+# def power(s):
+#     #  check string is not empty
+#     # now test
+#     prev = s[0]
+#     count = 1
+#     maxcount = 1
+#     n = len(s)
+#     for i in range(1, n):
+#         if s[i] == prev:
+#             count = count + 1
+#             maxcount = max(count, maxcount)
+#         else:
+#             count = 1
+#             prev = s[i]
+#     print(maxcount)
+#
+#
+# s = "leetcode"
+# power(s)
+
+### Given a string s consists of some words separated by spaces, return the length of the last word in the string. If the last word does not exist, return 0.
+
+# A word is a maximal substring consisting of non-space characters only.
+
+# def lengthofLastword(s):
+#     # string input
+#     # check if it has any last word with space separated
+#     # create list
+#     # check the length of the list
+#     # check the value in the last index and print
+#     l = s.split(' ')
+#     if len(l) == 1 :
+#         print(f"It does not have last word separated by space")
+#         print(0)
+#     else:
+#         n = len(l)
+#         print(l[n-1])
+
+# s = "hi you"
+# lengthofLastword(s)
+
+### You are given a string s, return the number of segments in the string.
+# A segment is defined to be a contiguous sequence of non-space characters.
+# Example 1:
+
+# Input: s = "Hello, my name is John"
+# Output: 5
+# Explanation: The five segments are ["Hello,", "my", "name", "is", "John"]
+
+# def segment(s):
+#     # convert to list
+#     # with index try finding count?
+#
+#     l2 = []
+#     l = s.split(' ')
+#     n = len(l)
+#     for i in range(0, n):
+#         sub = l[i]
+#         n1 = len(sub)
+#
+#         l2.append(n1)
+#     print(l2)
+#
+#     # find max count
+#     listsort = sorted(l2)
+#     print(listsort[len(listsort) - 1])
+
+# s = "Hello, my name is John"
+# segment(s)
