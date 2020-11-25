@@ -353,3 +353,74 @@
 
 # s = "Hello, my name is John"
 # segment(s)
+
+####### example of testcases using pytest:
+# import pytest
+
+# class Testnow():
+
+#     @pytest.mark.smoke
+#     def test_upper(self):
+#         assert 'foo'.upper() == 'FOO'
+
+#     def test_isupper(self):
+#         assert 'FOO'.isupper()
+#         assert not 'Foo'.isupper()
+
+
+#     def test_split(self):
+#         s = 'hello world'
+#         assert s.split(2) == ['hello', 'world']
+#         # s.split should throw when the separator is not a string
+#         with pytest.raises(TypeError):
+#             pass
+
+# a = Testnow()
+# a.test_isupper
+# a.test_split
+# a.test_upper
+
+# pytest.main()
+# #pytest.main(['-k','test_isupper'])  # running specific test case
+# #pytest.main(['-k','smoke'])  # running specific marked testcase
+
+### read the data from the URL and print it:::::
+# import urllib.request
+# # open a connection to a URL using urllib
+# webUrl  = urllib.request.urlopen('https://www.youtube.com/user/guru99com')
+
+# #get the result code and print it
+# code = webUrl.getcode()
+# print (f"The response code is {code}")
+
+# # read the data from the URL and print it
+# data = webUrl.read()
+# print (data)
+
+
+### find the number of articles in Hacker news home page[parsing html page]
+
+# import requests
+# from bs4 import BeautifulSoup as bs
+
+
+# response = requests.get("https://news.ycombinator.com/")
+# print(response.status_code)
+# #print(response.text, type(response.text))
+# #print(response.content,type(response.content))
+
+# soup = bs(response.text, 'html.parser') # or response.content
+# #print(soup)
+# print(soup.title.string)
+# ranks = soup.findAll('span',{'class': 'rank'})
+# print(ranks)
+# l = []
+# for i in ranks:
+#     r = i.text # or rank.string
+#     print(r)
+#     l.append(int(r.split('.')[0]))
+# print(max(l))
+
+## Hint : "price_cells = soup.findAll('td', {'class': 'pricecell'})
+## for price_cell in price_cells:
+##     print(price_cell.text)"
