@@ -403,24 +403,19 @@
 # import requests
 # from bs4 import BeautifulSoup as bs
 
-
 # response = requests.get("https://news.ycombinator.com/")
+# print(response.text)
+# print(response.content)
 # print(response.status_code)
-# #print(response.text, type(response.text))
-# #print(response.content,type(response.content))
 
-# soup = bs(response.text, 'html.parser') # or response.content
-# #print(soup)
+# soup = bs(response.text, 'html.parser')     # or response.content [ **creates object for bs]
 # print(soup.title.string)
-# ranks = soup.findAll('span',{'class': 'rank'})
-# print(ranks)
-# l = []
+# ranks = soup.findAll('span', {'class':'rank'})   #soup.findAll
+# #print(ranks)
+# l =[]
 # for i in ranks:
-#     r = i.text # or rank.string
-#     print(r)
-#     l.append(int(r.split('.')[0]))
+#     #print(i.text)
+#     s = i.text
+#     l.append(int(s.split('.')[0]))
+# print(l)
 # print(max(l))
-
-## Hint : "price_cells = soup.findAll('td', {'class': 'pricecell'})
-## for price_cell in price_cells:
-##     print(price_cell.text)"
