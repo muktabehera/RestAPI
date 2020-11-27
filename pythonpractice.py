@@ -102,7 +102,8 @@ if __name__ == '__main__':
 # index()	Returns the index of the first element with the specified value
    # thislist.index('a')
 # pop()	    Pop's out the element at the specified position/index
-    #f.pop(0)
+    #f.pop(0) , pop's out value at index 0
+    #f.pop() , pop's out the last value
 # remove()	Removes the item with the specified value from list
     #f.remove('a')
     #print(f)
@@ -114,12 +115,21 @@ if __name__ == '__main__':
     # l = [1,4,5,3,2,9,8]
     # x = sorted(l,reverse = True) , sort will be descending i.e. [9, 8, 5, 4, 3, 2, 1]
     # y = sorted(l) , 'False' is default and it gives ascending i.e. [1, 2, 3, 4, 5, 8, 9]
-# del(list) deletes the list
-    #del(list)
-# slicing works for both *string and *list
+# del(list) deletes the list/dict/tuple/string
+    # del(list)
+    #OR
+    # del list
+# slice(start_index, end_place, step) : slicing works for both *string and *list
     # a = [1,2,3,4,5,6]
     #a[1:3] i.e. (1 is index, 3 is 3rd place) = [2,3] will be result
     #a[:3] = [1,2,3]
+    #a[-1] , last element
+    #a[-2], second-last element
+    #a[ : : -1] , result will be reverse i.e. [6, 5, 4, 3, 2, 1]
+    #a[ : : -2] , result will be [6, 4, 2]
+    #a[ : : 2] , result will be [1, 3, 5]
+    #a[ : : 3] , result will be [1, 4]
+
 ##get the max valued item of a list, sld be either only numeric or only alphabatic list
     # l = [1,2,3]
     # max(l), result will be 3
@@ -146,7 +156,9 @@ if __name__ == '__main__':
 # string to int:
     # s = '123'
     # ints = int(s)
-
+# sum(iterable, start) , works for both tuple and list:
+    # a = (1, 2, 3, 4, 5)
+    # x = sum(a, 7)  , result will be 7 + all numbers , i.e. 22
 
 # if (string.find(sub_str) == -1): *string.find(sub_str, start, end)
 #         print("NO")
@@ -196,11 +208,13 @@ if __name__ == '__main__':
 ## string have also index starting from 0
     # str = "hello"
     #str[4] , result will be 'o'
-## strings can be multiplied / Lists can be multiplied
+## strings can be multiplied / Lists can be multiplied / tuple can be multiplied
     # s = "hello"
     # print(s*2) , will be hellohello
-    # l = [1,2,3]
-    # print(l*2) , will be [1, 2, 3, 1, 2, 3]
+    # ls = [1,2,3]
+    # print(ls*2) , will be [1, 2, 3, 1, 2, 3]
+    # t = (1,2)
+    # print(t*3) , will be (1, 2, 1, 2, 1, 2)
 ## concating string / concating list
     # s1 = "hello"
     # s2 = " world"
@@ -283,7 +297,9 @@ if __name__ == '__main__':
     # val_list = list(my_dict.values())
     # print(key_list[val_list.index(100)])
     # print(key_list[val_list.index(112)])
-
+# id() , returns a unique id for the specified object (tuple,dict,list,str,int).
+    # rec = {"Name" : "Python", "Age":"20"}
+    # id(rec)
 
 ## Operator:
     # s = 20%2 , result is 0  , mod
