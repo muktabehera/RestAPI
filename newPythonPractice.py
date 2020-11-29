@@ -419,3 +419,118 @@
 #     l.append(int(s.split('.')[0]))
 # print(l)
 # print(max(l))
+
+
+## Rest API, Pytest : Verify that a given address is from 'CA'
+# import requests
+# import json
+# import pytest
+#
+#
+# @pytest.fixture()
+# def setup():
+#     baseurl = "https://us-street.api.smartystreets.com/street-address?"
+#     authid = "0f4db2c2-e936-20ea-1b84-1d6807d35f07"
+#     authtoken = "3YTaJHzy3ON7GNBC3I7G"
+#
+#     url = baseurl + 'auth-id=' + authid + '&auth-token=' + authtoken + '&street=1600+amphitheatre+pkwy&city=mountain+view&state=CA&candidates=10'
+#
+#     # request_payload  = {}
+#     headers = {'Content-Type': 'application/json',
+#                'Host': 'us-street.api.smartystreets.com'
+#                }
+#
+#     # address_response = requests.get(url=url,headers=headers).json()
+#
+#     address_response = requests.get(url=url, headers=headers)
+#
+#     r = json.loads(address_response.text)
+#
+#     ans = r[0]['components']['state_abbreviation']
+#
+#     return {
+#         'ans': ans,
+#     }
+#
+#
+# def test_address(setup):
+#     # result = setup()
+#
+#     assert setup['ans'] == 'CA'
+#
+# pytest.main()
+
+#### 31: 1 Qrt (25), 1 nickle (5), 1 pennie (1) [dime 10]
+# num_coins(cents) ==> 3
+
+# def coin(cents):
+#     count = 0
+#
+#     if cents > 25:
+#         q1cents = cents // 25
+#         count = count + q1cents
+#         r1cents = cents % 25
+#         if r1cents > 10:
+#             q1r1cents = r1cents // 10
+#             count = count + q1r1cents
+#             r1r1cents = r1cents % 10
+#             if r1r1cents > 5:
+#                 q1r1r1cents = r1r1cents // 5
+#                 count = count + q1r1r1cents
+#                 r1r1r1cents = r1r1cents % 5
+#                 if r1r1r1cents > 1:
+#                     q1r1r1r1cents = r1r1r1cents // 1
+#                     count = count + q1r1r1r1cents
+#             elif r1r1cents > 1:
+#                 q2r1r1cents = r1r1cents // 1
+#                 count = count + q2r1r1cents
+#         elif r1cents > 5:
+#             q3r1cents = r1cents // 5
+#             count = count + q3r1cents
+#             r3r1cents = r1cents % 5
+#             if r3r1cents > 1:
+#                 q4r3r1cents = r3r1cents // 1
+#                 count = count + q4r3r1cents
+#         elif r1cents > 1:
+#             q5r1cents = r1cents // 1
+#             count = count + q5r1cents
+#
+#     elif cents > 10:
+#         q2cents = cents // 10
+#         count = count + q2cents
+#         r2cents = cents % 10
+#         if r2cents > 5:
+#             q6r2cents = r2cents // 5
+#             count = count + q6r2cents
+#             r6r2cents = r2cents % 5
+#             if r6r2cents > 1:
+#                 q7r6r2cents = r6r2cents // 1
+#                 count = count + q7r6r2cents
+#
+#         elif r2cents > 1:
+#             q7r2cents = r2cents // 1
+#             count = count + q7r2cents
+#     elif cents > 5:
+#         q3cents = cents // 5
+#         count = count + q3cents
+#         r3cents = cents % 5
+#         if r3cents > 1:
+#             q8r3cents = r3cents // 1
+#             count = count + q8r3cents
+#     elif cents > 1:
+#         q4cents = cents // 1
+#         count = count + q4cents
+#
+#     print(count)
+#
+#
+# cents = 153
+# coin(cents)
+
+### urlencode before making get request
+# requests.utils.quote("615 e poplar")
+
+### generate uuid
+# import uuid
+# print(uuid.uuid4())  # 6b8571a1-61d9-4700-8cb1-594b91127505
+# print(uuid.uuid4().hex) # 886158d9336949c69a1b3d144b4f5305
