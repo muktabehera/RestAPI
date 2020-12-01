@@ -90,21 +90,28 @@ if __name__ == '__main__':
     # f.extend(['e', 'k'])
 # insert()	Adds an element at the specified position (index,value)
    # thislist.insert(2, 'test')
-# clear()	Removes/Clears all the elements from the list
-    #list.clear()
+# clear()	Clears all the elements from the list/dictionary
+    #list1.clear()
+    #dict1.clear()
 # copy()	Returns a copy of the list or dictionary
     # thislist = ["apple", "banana", "cherry"]
     # mylist = thislist.copy()
     #OR
     # mylist = list(thislist) i.e. list()
-# count()	Returns the number of elements with the specified value. works in List / String
+# list.count(value)	Returns the number of elements with the specified value. works in List
    #thislist.count('s')
 # index()	Returns the index of the first element with the specified value
    # thislist.index('a')
 # pop()	    Pop's out the element at the specified position/index
     #f.pop(0) , pop's out value at index 0
-    #f.pop() , pop's out the last value
-# remove()	Removes the item with the specified value from list
+    #f.pop() , pop's out the last value only works for list
+
+    # dict.pop('key') Also works in dictionary, it pops out the value for the associated key:
+    # dict1 = {"name": "Mike", "salary": 8000}
+    # t = dict1.pop("name")
+    # print(t)
+    # print(dict1) , the above key:value pair will be removed from dict1
+# remove()	Removes the item with the specified 'value' from list
     #f.remove('a')
     #print(f)
 # reverse()	Reverses the order of the list
@@ -118,13 +125,16 @@ if __name__ == '__main__':
 # del(list) deletes the list/dict/tuple/string
     # del(list)
     #OR
-    # del list
+    # del list , deletes the list
+    # del list[index] , deletes the value with index
+    # del list[1:2] , deletes the sliced portion from list
 # slice(start_index, end_place, step) : slicing works for both *string and *list
     # a = [1,2,3,4,5,6]
     #a[1:3] i.e. (1 is index, 3 is 3rd place) = [2,3] will be result
     #a[:3] = [1,2,3]
     #a[-1] , last element
     #a[-2], second-last element
+    #a[:-1] or a[0:-1] , [1, 2, 3, 4, 5]
     #a[ : : -1] , result will be reverse i.e. [6, 5, 4, 3, 2, 1]
     #a[ : : -2] , result will be [6, 4, 2]
     #a[ : : 2] , result will be [1, 3, 5]
@@ -237,14 +247,17 @@ if __name__ == '__main__':
     # s = "kjhkjh"
     # l = list(s)
 ## capitalizes first letter of string
-    # s = "hELLO"
-    # s2 = s.capitalize() , result will be HELLO
+    # s = "my name is James bond"
+    # s2 = s.capitalize() , result will be "My name is james bond"
 ## swap the cases in a string
     # s = "ujiKOL"
     # s2 = s.swapcase(), result will be 'UJIkol'
+## title()
+    # s = "welcome to the beautiful world of python"
+    # s.title() , result "Welcome To The Beautiful World Of Python"
 ## How will you check in a string that all characters are alphanumeric,digits,alphabets?
     # s = "67t"
-    # s.isalnum() , returns true if its alphanumeric
+    # s.isalnum() , returns true if its alphanumeric, note- space is not alphanumeric
     # s.isdigit() , returns true if its only digits i.e. between 0-9
     # s.isalpha() , returns true if its only albhabets
     # s.islower() , returns true if its only lower case
@@ -273,6 +286,11 @@ if __name__ == '__main__':
 ## replaces all occurrences of old substring in string with new string
     # str = "hello world"
     # str.replace("hell","mell") , result will be 'mello world'
+## find ASCII code of a character : ord(‘char’)
+    # print(ord('p')) , result will be 112
+## string.count(value, start, end)
+    # start	Optional. An Integer. The position to start the search. Default is 0
+    # Optional. An Integer. The position to end the search. Default is the end of the string
 
 
 ##Dictionary
@@ -291,6 +309,7 @@ if __name__ == '__main__':
     # dict.values() , will return all values i.e. dict_values([2, 3])
     #OR
     #dict['a'] , will return value for key 'a'
+    # dict.get('key') , will resturn value for key
 # finding key for a particular value in dictionary:
     # my_dict ={"java":100, "python":112, "c":11}
     # key_list = list(my_dict.keys())
@@ -300,6 +319,19 @@ if __name__ == '__main__':
 # id() , returns a unique id for the specified object (tuple,dict,list,str,int).
     # rec = {"Name" : "Python", "Age":"20"}
     # id(rec)
+# delete a key:value pair from dictionary:
+    # dict = {'a':'apple', 'b':'bat'}
+    #  del dict['a'] , result will be {'b': 'bat'}
+# dict.pop('key'), removes that key:value pair from dict. Output is the value associated to the key.
+#dict1.items() returns a list of tuples containing the key-value pairs in dict1
+    # dict1 = {"name": "Mike", "salary": 8000}
+    # d = dict1.items() , result is "dict_items([('name', 'Mike'), ('salary', 8000)])"
+# copy dictionary
+    # dict2 = dict1.copy()
+    # dict2 = dict(dict1)
+    # dict2 = dict(dict1.items())
+
+
 
 ## Operator:
     # s = 20%2 , result is 0  , mod
