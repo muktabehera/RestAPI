@@ -384,7 +384,7 @@
 # #pytest.main(['-k','test_isupper'])  # running specific test case
 # #pytest.main(['-k','smoke'])  # running specific marked testcase
 
-### read the data from the URL and print it:::::
+### read the data from the URL and print it [note- skip this, follow the requests & BeautifulSoup > html.parser]
 # import urllib.request
 # # open a connection to a URL using urllib
 # webUrl  = urllib.request.urlopen('https://www.youtube.com/user/guru99com')
@@ -534,3 +534,39 @@
 # import uuid
 # print(uuid.uuid4())  # 6b8571a1-61d9-4700-8cb1-594b91127505
 # print(uuid.uuid4().hex) # 886158d9336949c69a1b3d144b4f5305
+
+### from a list find how many times a number is iterated(collections):
+    # l = [2,2,3,4,4,4]
+    # import collections
+    # a = collections.Counter(l)
+    # print(a)        # Counter({4: 3, 2: 2, 3: 1})
+    # print(a.most_common(2)) # returns n numbers of the key-value pairs where the value is the most recurring. i.e. [(4, 3), (2, 2)]
+    # mydict = dict(a)
+    # print(mydict) # result will be {2: 2, 3: 1, 4: 3}
+    ### import collections
+    ### a=collections.Counter([2,2,3,3,3,4])
+    ### b=collections.Counter([2,2,3,4,4])
+    ### a|b  # result is "Counter({3: 3, 2: 2, 4: 2})", returns the pair of keys and the highest recurring value
+    ### a&b # result is "Counter({3: 1, 4: 1, 5: 1})", returns the pair of keys and the lowest recurring value.
+
+### Sorting in ascesnding order "Selection sort"
+
+# def ascsort(l):
+#     # find min value in l, append it to sorted list:
+#     # remove min value from l
+#     # Repeat
+#     a = []
+#     while len(l) >= 1:
+#         m = min(l)
+#         a.append(m)
+#         # print(a)
+#         l.remove(m)
+#         # print(l)
+#
+#     print(a)
+#
+#
+# l = [2, 1, 6, 3]
+# ascsort(l)
+
+
