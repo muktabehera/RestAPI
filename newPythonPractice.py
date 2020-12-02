@@ -569,4 +569,50 @@
 # l = [2, 1, 6, 3]
 # ascsort(l)
 
+#### Target ==>
+### [14,13, 6, 4, 1,2] with target 3 print 1 and 3 in a list
 
+# def target(l, t):
+#     l2 = l.copy()
+#     targetlist = []
+#     not_solved = True
+#     # print(l2)
+#
+#     for x in l:
+#         for y in l2:
+#             if x != y:
+#                 if x + y == t:
+#                     targetlist.extend([x, y])
+#                     not_solved = False
+#
+#         if not_solved == False:
+#             break
+#     return targetlist
+#
+#
+# l = [1, 5, 6, 2, 4]
+# t = 11
+# print(target(l, t))
+
+# ####Q==> Create a new dictionary by extracting the following keys from a given dictionary
+## keys to extract ["name", "salary"]
+## sampleDict = {
+##   "name": "Kelly",
+##   "age":25,
+##   "salary": 8000,
+##   "city": "New york"
+## }
+# sampleDict = {
+#   "name": "Kelly",
+#   "age":25,
+#   "salary": 8000,
+#   "city": "New york"
+# }
+#
+# new = {}
+#
+# keys = ["name","salary"]
+#
+# for x in keys:
+#     new[x] = sampleDict[x]
+# print(new)

@@ -118,10 +118,14 @@ if __name__ == '__main__':
     #list.reverse()
 # sort()	Sorts the list in Ascending order
     #f.sort()
-# sorted(iterable, key=key, reverse=reverse) used for sorting list, dictionary, tuple
+# sorted(iterable, key=key, reverse=reverse) used for sorting list, dictionary, tuple, also string
     # l = [1,4,5,3,2,9,8]
     # x = sorted(l,reverse = True) , sort will be descending i.e. [9, 8, 5, 4, 3, 2, 1]
     # y = sorted(l) , 'False' is default and it gives ascending i.e. [1, 2, 3, 4, 5, 8, 9]
+    #     a = "cdbae"
+    #     s = sorted(a)
+    #     result = ''.join(s)
+    #     print(result)
 # del(list) deletes the list/dict/tuple/string
     # del(list)
     #OR
@@ -169,6 +173,10 @@ if __name__ == '__main__':
 # sum(iterable, start) , works for both tuple and list:
     # a = (1, 2, 3, 4, 5)
     # x = sum(a, 7)  , result will be 7 + all numbers , i.e. 22
+# reversed() : It can be used for string,list,tuple,range
+    # seq_list = [1, 2, 4, 3, 5]
+    # print(list(reversed(seq_list)))
+
 
 # if (string.find(sub_str) == -1): *string.find(sub_str, start, end)
 #         print("NO")
@@ -200,7 +208,7 @@ if __name__ == '__main__':
 # b = bool(a)
 
 ##String##
-## Replace , str.replace(old, new[, max])
+## Replace , string.replace(oldvalue, newvalue, count)
     # s1 = "hello"
     # s1.replace('h','d')
     # s1.replace('ll','just')
@@ -291,7 +299,7 @@ if __name__ == '__main__':
 ## string.count(value, start, end)
     # start	Optional. An Integer. The position to start the search. Default is 0
     # Optional. An Integer. The position to end the search. Default is the end of the string
-
+### string.index(value) , finds the index of the first occurring value in string.
 
 ##Dictionary
 # Append to a dictionary:
