@@ -23,18 +23,27 @@
 #a = practice()
 #a.fibonacci(10)
 
-##Given number is prime number or not.
-# class test():
-#     def findprime(self):
-#         num = 100
-#         for x in range(2,num):
-#             if x%2 == 0:
-#                 print(f"The number {x} is not prime")
-#             else:
-#                 print(f"{x} is a prime number")
+##Given number is prime number or not. [ note - 2 is divisible by 2 and is still prime]
+# Note: A number divisible by 1 and itself only is prime. So if it is divisible by any other number its not prime.
+# def primetest(n):
+#     # check if n is greater than 2:
+#     # if greater than 2 test n%i in range 2,n
 #
-# t = test()
-# t.findprime()
+#     if n > 2:
+#         result = 1
+#         for i in range(2, n):
+#             if n % i == 0:
+#                 result = 0
+#
+#         if result == 0:
+#             print("Not Prime")
+#
+#         elif result == 1:
+#             print("Prime")
+#
+#
+# n = 99
+# primetest(n)
 
 ##Write Python code to check the given sequence is a palindrome or not?
 #mom
@@ -56,6 +65,20 @@
 #
 # a = test()
 # a.palindrome()
+##OR
+# def checkpalindrome(s):
+
+#     # assuning the input is string
+#     rev_s = s[ : : -1]
+#     print(rev_s)
+#     if s == rev_s:
+#         print("Palindrome")
+#     else:
+#         print("No not a palindrome")
+
+
+# s = "mom"
+# checkpalindrome(s)
 
 ##Write Python code to sort a numerical dataset?
 
@@ -68,6 +91,24 @@
 # a = test()
 # l = [1,2,3,4,5,8,1,2,3,4,5]
 # a.sort(l)
+
+### Write Python code to sort a numerical dataset without using sort function.
+#
+# def sortinglist(l):
+#     # assuming its list and we are doing ascending sort
+#     finallist = []
+#
+#     while len(l) >= 1:
+#         m = min(l)
+#         finallist.append(m)
+#         l.remove(m)
+#
+#     return (finallist)
+#
+#
+# l = [3, 4, 2, 1]
+# print(sortinglist(l))
+
 
 ## converting list into nested list:
 # x = [ "abc","def"]
@@ -86,20 +127,18 @@
 
 ## Print a string N times.
 # class test():
-#     def printNtimes(self,str,n):
-#         # str = "testing"
-#         # n = 10
-#         x=0
-#         while x < n:
-#             print(str)
-#             x= x+1
 #
-#         print(str*n)
+#     def funNtimes(self, s, n):
+#         # m = s*n
+#         # print(m)
+#         for i in range(0, n):
+#             print(s)
 #
+#
+# s = "hello"
+# n = 10
 # a = test()
-# str1= "hello every one"
-# n1 = 3
-# a.printNtimes(str1,n1)
+# a.funNtimes(s, n)
 
 ##Check the memory usage of  an object
 # import sys
@@ -263,21 +302,20 @@
 # Input: nums = [8,1,2,2,3]
 # Output: [4,0,1,1,3]
 
-# def smallernumbers(l):
-#     r = []
+# def smaller(l):
+#     a = []
+#     for x in l:
+#         count = 0
+#         for y in l:
+#             if y < x:
+#                 count = count + 1
+#         a.append(c)
 #
-#     for i in l:
-#         s = 0
-#         for j in l:
-#             if i != j and j < i:
-#                 s = s + 1
-#         r.append(s)
-#
-#     print(r)
+#     print(a)
 #
 #
-# l = [8, 1, 5, 6, 7]
-# smallernumbers(l)
+# l = [5, 6, 7, 8, 4, 3]
+# smaller(l)
 
 #
 ###Given a string s, the power of the string is the maximum length of a non-empty substring that contains only one unique character.
