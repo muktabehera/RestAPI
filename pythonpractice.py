@@ -100,9 +100,9 @@ if __name__ == '__main__':
     # mylist = list(thislist) i.e. list()
 # list.count(value)	Returns the number of elements with the specified value. works in List
    #thislist.count('s')
-# index()	Returns the index of the first element with the specified value
+# list.index(value)	Returns the index of the first element with the specified value
    # thislist.index('a')
-# pop()	    Pop's out the element at the specified position/index
+# list.pop()	    Pop's out the element at the specified position/index
     #f.pop(0) , pop's out value at index 0
     #f.pop() , pop's out the last value only works for list
 
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     # t = dict1.pop("name")
     # print(t)
     # print(dict1) , the above key:value pair will be removed from dict1
-# remove()	Removes the item with the specified 'value' from list
+# list.remove(value)	Removes the item with the specified 'value' from list
     #f.remove('a')
     #print(f)
 # reverse()	Reverses the order of the list
@@ -149,7 +149,7 @@ if __name__ == '__main__':
     # max(l), result will be 3
     # a = ['a','b','c']
     # max(a) , result will be c
-## get the max valued item of a list, sld be either only numeric or only alphabatic list
+## get the min valued item of a list, sld be either only numeric or only alphabatic list
     # l = [1,2,3]
     # min(l), result will be 1
     # a = ['a','b','c']
@@ -210,8 +210,8 @@ if __name__ == '__main__':
 ##String##
 ## Replace , string.replace(oldvalue, newvalue, count)
     # s1 = "hello"
-    # s1.replace('h','d')
-    # s1.replace('ll','just')
+    # r = s1.replace('h','d')
+    # r2 = s1.replace('ll','just')
 ## find , str.find(substring, start, end)
     # s2 = 'hello world now'
     # s1.find('world',2,-2) will search string within 'llo world n', note:index starts with 0. If substring exists returns index else returns -1

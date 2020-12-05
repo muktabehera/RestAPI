@@ -309,7 +309,7 @@
 #         for y in l:
 #             if y < x:
 #                 count = count + 1
-#         a.append(c)
+#         a.append(count)
 #
 #     print(a)
 #
@@ -434,7 +434,7 @@
 # # read the data from the URL and print it
 # data = webUrl.read()
 # print (data)
-
+#----------------------------------------------
 
 ### find the number of articles in Hacker news home page[parsing html page]
 
