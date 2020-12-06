@@ -338,8 +338,11 @@ if __name__ == '__main__':
     # dict2 = dict1.copy()
     # dict2 = dict(dict1)
     # dict2 = dict(dict1.items())
-
-
+# how to zip two lists to make dictionary having key,value pair:
+    # dictNew = dict(zip(list1,list2))
+# How to find key,value from dictionary:
+    # for key,value in dict.items():
+    # print(key,value)
 
 ## Operator:
     # s = 20%2 , result is 0  , mod
@@ -347,3 +350,8 @@ if __name__ == '__main__':
     # s = 20//2 , result is 10 , floor division
     # s = 20*2 , result is 40, multiplication
     # s = 20**2 , result is 400   , Exponent i.e. 20 to the power of 2
+
+### Summary:
+# LIST [sort,sorted(l,reverse = True), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index,reverse, list(reversed(seq_list)) , max, min, sum, clear(),len,sort, sorted(list), sorted(list,reverse = True)]
+# string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len]
+# dict [ list(dict1.keys()), list(dict1.values(), del, pop(key), items(), clear()  ]
