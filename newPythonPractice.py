@@ -654,3 +654,68 @@
 # for x in keys:
 #     new[x] = sampleDict[x]
 # print(new)
+
+#### Given a string ‘str’ of digits and an integer ‘n’, build the lowest possible number by removing ‘n’ digits from the string and not changing the order of input digits.
+#
+# def findingsmallest(str, n):
+#     i = 0
+#     l = list(str)
+#
+#     while i < n:
+#         m = max(l)
+#         l.remove(m)
+#         i = i + 1
+#     print(l)
+#     print(''.join(l))
+#
+#
+# str = "18329"
+# n = 3
+# findingsmallest(str, n)
+
+### You are given an array of integers. Return an array of the same size where the element at each index is the product of all the elements in the original array except for the element at that index. For example, an input of [1, 2, 3, 4, 5] should return [120, 60, 40, 30, 24]. You cannot use division in this problem.
+
+# def prod(l):
+#     a = []
+#
+#     for i in range(0, len(l)):
+#         s = 1
+#         smax = 1
+#         for j in range(0, len(l)):
+#
+#             if j != i:
+#                 s = l[j] * s
+#         smax = max(s, smax)
+#         a.append(smax)
+#
+#     print(a)
+#
+#
+# l = [1, 2, 3, 4, 5]
+# prod(l)
+
+#### Given an array consisting many inner arrays, flatten the array into one: example: input: [[6,4,7,[9,5,4,[2,4,8]]],[2,2,7],[9,0,7,[9,3,1,8,5]]] output: [6,4,7,9,5,4,2,4,8,2,2,7,9,0,7,9,3,1,8,5]
+
+#
+# def fun1(l1):
+#     a = []
+#
+#     for i in range(0, len(l1)):
+#         if type(l1[i]) == type([]):
+#             for x in l1[i]:
+#                 if type(x) == type([]):
+#                     for y in x:
+#                         if type(y) == type([]):
+#                             pass
+#                         elif type(y) != type([]):
+#                             a.append(y)
+#                 elif type(x) != type([]):
+#                     a.append(x)
+#         elif type(l1[i]) != type([]):
+#             a.append(l1[i])
+#
+#     print(a)
+#
+#
+# l1 = [[6, 4, 7, [9, 5, 4, [2, 4, 8]]], [2, 2, 7], [9, 0, 7, [9, 3, 1, 8, 5]]]
+# fun1(l1)
