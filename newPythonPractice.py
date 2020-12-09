@@ -719,3 +719,41 @@
 #
 # l1 = [[6, 4, 7, [9, 5, 4, [2, 4, 8]]], [2, 2, 7], [9, 0, 7, [9, 3, 1, 8, 5]]]
 # fun1(l1)
+
+### Given a list and a integers N. At every nth reverse the list
+# n = 3, input: [1,2,3,4,5,6,7,8], output = [3,2,1,6,5,4,8,7]
+
+# def fun1(l, n):
+#     ln = len(l)
+#     f = []
+#     while ln >= n:
+#         a = []
+#         for i in range(0, n):
+#             a.append(l[i])
+#         a.reverse()
+#         del l[0:n]
+#         ln = ln - n
+#         f.extend(a)
+#
+#     if ln <= n:
+#         l.reverse()
+#         f.extend(l)
+#
+#     print(f)
+#
+#
+# l = [1, 2, 3, 4, 5, 6, 7, 8]
+# n = 3
+# fun1(l, n)
+
+### Find if Given number is power of 2 or not. More specifically, find if given number can be expressed as 2^k where k >= 1.
+#
+# def fun1(num):
+#     for i in range(0, 100):
+#
+#         if 2 ** i == num:
+#             print(f"The given number is {i} power of 2")
+#
+#
+# num = 32
+# fun1(num)
