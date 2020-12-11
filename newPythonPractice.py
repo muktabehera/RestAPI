@@ -757,3 +757,334 @@
 #
 # num = 32
 # fun1(num)
+
+### Write a Python script to sort (ascending and descending) a dictionary by value
+
+# def flipdict(d):
+#     f = {}
+#     for x, y in d.items():
+#         f[y] = x
+#
+#     return f
+#
+#
+# def fun1(d):
+#     mydict = {}
+#     fd = flipdict(d)
+#     fdkeys = list(fd.keys())
+#     sortfdkeys = sorted(fdkeys, reverse=True)  # for ascending delete reverse = True
+#     for x in sortfdkeys:
+#         mydict[x] = fd[x]
+#
+#     return flipdict(mydict)
+#
+#
+# d = {'a': 4, 'h': 3, 'k': 1, 'l': 2}
+# print(fun1(d))
+
+### Write a Python script to add a key to a dictionary.
+
+# def addkeyvalue(key, value, d):
+#     d[key] = value
+#
+#     return d
+#
+#
+# d = {0: 10, 1: 20}
+# key = 2
+# value = 30
+# print(addkeyvalue(key, value, d))
+
+### Write a Python script to concatenate following dictionaries to create a new one.
+# Sample Dictionary :
+# dic1={1:10, 2:20}
+# dic2={3:30, 4:40}
+# dic3={5:50,6:60}
+# Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+# def con(d1, d2, d3):
+#     newd = {}
+#     for key in d1:
+#         newd[key] = d1[key]
+#
+#     for key in d2:
+#         newd[key] = d2[key]
+#
+#     for key in d3:
+#         newd[key] = d3[key]
+#
+#     return newd
+#
+#
+# d1 = {1: 10, 2: 20}
+# d2 = {3: 30, 4: 40}
+# d3 = {5: 50, 6: 60}
+# print(con(d1, d2, d3))
+
+### Write a Python script to check whether a given key already exists in a dictionary
+
+# def check(dkey, d):
+#     result = 0
+#     for key in d:
+#         if key == dkey:
+#             print("Yes")
+#             result = 1
+#
+#     if result == 0:
+#         print("No key does not exists in the dictionary")
+#
+#
+# d = {'a': 1, 'b': 2}
+# dkey = 'b'
+# check(dkey, d)
+
+### Write a Python program to iterate over dictionaries using for loops
+
+# def fun1(d):
+#     for key, value in d.items():
+#         print(key, value, end='  ')
+#
+#
+# d = {'a': 1, 'b': 2}
+# fun1(d)
+
+###Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x). Go to the editor
+# Sample Dictionary ( n = 5) :
+# Expected Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+# def dicttest(n):
+#     f = {}
+#     for i in range(1, n + 1):
+#         f[i] = i * i
+#
+#     print(f)
+#
+# n = 5
+# dicttest(n)
+
+###Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are square of keys. Go to the editor
+# Sample Dictionary
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}
+# def dictsquare(n1, n2):
+#     f = {}
+#     for i in range(n1, n2 + 1):
+#         f[i] = i ** 2
+#
+#     print(f)
+#
+# n1 = 1
+# n2 = 15
+# dictsquare(n1, n2)
+
+###Write a Python script to merge two Python dictionaries.
+# def mergedict(d1, d2):
+#     newdict = {}
+#     for x in d1:
+#         newdict[x] = d1[x]
+#     for y in d2:
+#         newdict[y] = d2[y]
+#
+#     return newdict
+#
+#
+# d1 = {'a': 1, 'b': 2}
+# d2 = {'c': 3, 'd': 4}
+# print(mergedict(d1, d2))
+
+###Write a Python program to sum all the values/keys/items in a dictionary
+# def summing(d):
+#     sumkey = 0
+#     sumvalue = 0
+#
+#     for x in d:
+#         sumkey = sumkey + x
+#     print(f"sum of keys in the dict is {sumkey}")
+#
+#     for key in d:
+#         sumvalue = sumvalue + d[key]
+#     print(f"sum of keys in the dict is {sumvalue}")
+#
+#     sumitems = sumkey + sumvalue
+#     print(f"sum of keys in the dict is {sumitems}")
+#
+# d = {1: 2, 3: 4, 5: 6, 7: 8}
+# summing(d)
+
+###Write a Python program to multiply all the keys/values/items in a dictionary
+# def multi(d):
+#     multikeys = 1
+#     multivalues = 1
+#     multiitems = 1
+#     for key in d:
+#         multikeys = multikeys * key
+#
+#     for key in d:
+#         multivalues = multivalues * d[key]
+#
+#     for key, value in d.items():
+#         multiitems = multiitems * key * value
+#
+#     print(multikeys)
+#     print(multivalues)
+#     print(multiitems)
+#
+#
+# d = {1: 2, 2: 3, 3: 4}
+# multi(d)
+
+###Write a Python program to remove a key from a dictionary.
+# def fun1(key, d):
+#     # del d[key]
+#     d.pop(key)
+#
+#     # print(d)
+#     print(d)
+#
+# key = 'a'
+# d = {'b': 2, 'a': 3}
+# fun1(key, d)
+
+###Write a Python program to map two lists into a dictionary.
+# def dictfromlist(l1,l2):
+#     newdict = dict(zip(l1,l2))
+#     print(newdict)
+#
+# l1 = [1,2]
+# l2 = [3,4]
+# dictfromlist(l1,l2)
+
+###Write a Python program to sort a dictionary by key.
+# def fun1(d):
+#     newd = {}
+#     # find keys list
+#     # sort keys list
+#     # make new dict
+#     listkeys = list(d.keys())
+#     sortlistkeys = sorted(listkeys)
+#
+#     for x in sortlistkeys:
+#         newd[x] = d[x]
+#
+#     print(newd)
+#
+# d = {1: 'a', 3: 'c', 2: 'd'}
+# fun1(d)
+
+###Write a Python program to get the maximum and minimum value in a dictionary.
+# def dictmaxminvalue(d):
+#     listvalues = list(d.values())
+#     maxvalue = max(listvalues)
+#     minvalue = min(listvalues)
+#
+#     print(f"The max value is dictionary is {maxvalue}")
+#     print(f"The min value is dictionary is {minvalue}")
+#
+#
+# d = {1: 3, 2: 4, 4: 5, 3: 1}
+# dictmaxminvalue(d)
+
+###Write a Python program to remove duplicates from Dictionary.[key in a dictionary should be unique,If a key needs to store multiple values, then the value associated with the key should be a list or another dictionary.]
+# def fun1(d):
+#     f = {}
+#     for x in d:
+#         if x not in f:
+#             f[x] = d[x]
+#
+#     print(f)
+#
+#
+# d = {1: 2, 2: 3, 2: 3, 4: 5, 1: 2, 1: 4}
+# fun1(d)
+
+###Write a Python program to check a dictionary is empty or not.
+# def check(d):
+#     d2 = {}
+#
+#     if d == d2:
+#         print("Yes it is an empty dictionary")
+#
+#     elif d != d2:
+#         print("No it is not an empty dictionary")
+#
+#
+# d = {1: 2}
+# check(d)
+
+###Write a Python program to combine two dictionary adding values for common keys.
+# d1 = {'a': 100, 'b': 200, 'c':300}
+# d2 = {'a': 300, 'b': 200, 'd':400}
+# Sample output: Counter({'a': 400, 'b': 400, 'd': 400, 'c': 300})
+
+# def dictnew(d1, d2):
+#     new = {}
+#     for x in d1:
+#         if x in d2:
+#             v = d1[x] + d2[x]
+#             new[x] = v
+#         elif x not in d2:
+#             new[x] = d1[x]
+#     for y in d2:
+#         if y not in new:
+#             new[y] = d2[y]
+#
+#     print(new)
+#
+#
+# d1 = {'a': 100, 'b': 200, 'c': 300}
+# d2 = {'a': 300, 'b': 200, 'd': 400}
+# dictnew(d1, d2)
+
+###Write a Python program to print all unique values in a dictionary. Go to the editor
+# Sample Data : [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+# Expected Output : Unique Values: {'S005', 'S002', 'S007', 'S001', 'S009'}
+#
+# def test(d):
+#     a = []
+#     for x in d:
+#         for key in x:
+#             a.append(x[key])
+#
+#     uniq = []
+#
+#     for x in a:
+#         if x not in uniq:
+#             uniq.append(x)
+#
+#     print(uniq)
+#
+#
+# d = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {"V": "S009"}, {"VIII": "S007"}]
+# test(d)
+
+### Write a Python program to find the highest 3 values in a dictionary.
+# def fun1(d):
+#     listvalues = list(d.values())
+#     newlist = sorted(listvalues, reverse=True)
+#     print(newlist[0:3])
+#
+#
+# d = {1: 2, 3: 4, 5: 6, 2: 3, 6: 9}
+# fun1(d)
+
+### Write a Python program to combine values in python list of dictionaries.
+# Sample data: [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, {'item': 'item1', 'amount': 750}]
+# Expected Output: Counter({'item1': 1150, 'item2': 300})
+# def fun1(d):
+#     fd = {}
+#     for i in range(0, len(d)):
+#         if d[i]['item'] in fd:
+#             v = d[i]['amount'] + fd[d[i]['item']]
+#             fd[d[i]['item']] = v
+#         elif d[i]['item'] not in fd:
+#             fd[d[i]['item']] = d[i]['amount']
+#
+#     print(fd)
+#
+#
+# d = [
+#     {'item': 'item1', 'amount': 400},
+#     {'item': 'item2', 'amount': 300},
+#     {'item': 'item1', 'amount': 750}
+# ]
+#
+# fun1(d)
+
