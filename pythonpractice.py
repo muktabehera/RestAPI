@@ -212,6 +212,10 @@ if __name__ == '__main__':
     # s1 = "hello"
     # r = s1.replace('h','d')
     # r2 = s1.replace('ll','just')
+#### replace() , can be also used for removing spaces in a string
+    # s.replace(" ", "")
+    # OR
+    # s2 = ''.join(s.split())
 ## find , str.find(substring, start, end)
     # s2 = 'hello world now'
     # s1.find('world',2,-2) will search string within 'llo world n', note:index starts with 0. If substring exists returns index else returns -1
