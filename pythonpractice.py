@@ -354,4 +354,4 @@ if __name__ == '__main__':
 ### Summary:
 # LIST [sort,sorted(l,reverse = True), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index,reverse, list(reversed(seq_list)) , max, min, sum, clear(),len,sort, sorted(list), sorted(list,reverse = True)]
 # string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len]
-# dict [ list(dict1.keys()), list(dict1.values(), del, pop(key), items(), clear()  ]
+# dict [ list(dict1.keys()), list(dict1.values(), del, pop(key), items(), clear(), dict(zip(list1,list2))  ]
