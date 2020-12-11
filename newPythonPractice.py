@@ -1088,3 +1088,203 @@
 #
 # fun1(d)
 
+### Write a Python program to create a dictionary from a string.
+# Note: Track the count of the letters from the string.
+# Sample string : 'w3resource'
+# Expected output: {'w': 1, '3': 1, 'r': 2, 'e': 2, 's': 1, 'o': 1, 'u': 1, 'c': 1}
+# def fun1(s):
+#     d = {}
+#
+#     for x in s:
+#         d[x] = s.count(x)
+#
+#     print(d)
+#
+#
+# s = 'w3resource'
+# fun1(s)
+
+###Write a Python program to count the values associated with key in a dictionary. Go to the editor
+# Sample data: = [{'id': 1, 'success': True, 'name': 'Lary'}, {'id': 2, 'success': False, 'name': 'Rabi'}, {'id': 3, 'success': True, 'name': 'Alex'}]
+# Expected result: Count of how many dictionaries have success as True
+#
+# def fun1(d, key, value):
+#     c = 0
+#
+#     for x in d:
+#         if x[key] == value:
+#             c = c + 1
+#     print(f"Count of '{value}' associated with key '{key}' is {c}")
+#
+#
+# d = [
+#     {'id': 1, 'success': True, 'name': 'Lary'},
+#     {'id': 2, 'success': False, 'name': 'Rabi'},
+#     {'id': 3, 'success': True, 'name': 'Alex'},
+#     {'id': 4, 'success': True, 'name': 'Alexy'}
+# ]
+# key = 'success'
+# value = True
+# fun1(d, key, value)
+
+###Write a Python program to sort a list alphabetically in a dictionary.
+# num = {'n1': [2, 3, 1], 'n2': [5, 1, 2], 'n3': [3, 2, 4]}
+# output = {'n1': [1, 2, 3], 'n2': [1, 2, 5], 'n3': [2, 3, 4]}
+# def fun1(d):
+#     fd = {}
+#     for x in d:
+#         item = d[x]
+#         item.sort()
+#         fd[x] = item
+#
+#     print(fd)
+#
+#
+# d = {'n1': [2, 3, 1], 'n2': [5, 1, 2], 'n3': [3, 2, 4]}
+# fun1(d)
+
+###Write a Python program to remove spaces from dictionary keys.
+# d = {'S  001': ['Math', 'Science'], 'S    002': ['Math', 'English']}
+# output = {'S001': ['Math', 'Science'], 'S002': ['Math', 'English']}
+# def fun1(d):
+#     fd = {}
+#     for x in d:
+#         x1 = x.replace(" ", "")
+#         fd[x1] = d[x]
+#
+#     print(fd)
+#
+#
+# d = {'S  001': ['Math', 'Science'], 'S    002': ['Math', 'English']}
+# fun1(d)
+
+###Write a Python program to get the top three items in a shop.
+# Sample data: {'item1': 45.50, 'item2':35, 'item3': 41.30, 'item4':55, 'item5': 24}
+# Expected Output:
+# item4 55
+# item1 45.5
+# item3 41.3
+
+# def findtop3(d):
+#     fd = {}
+#     listkeys = list(d.keys())
+#     listvalues = list(d.values())
+#     n = 3
+#     while n >= 1:
+#         maxvalue = max(listvalues)
+#         # print(maxvalue)
+#         i = listvalues.index(maxvalue)
+#         key = listkeys[i]
+#         fd[key] = maxvalue
+#         # print(fd)
+#         listvalues.remove(maxvalue)
+#         n = n - 1
+#
+#     print(fd)
+#
+#
+# d = {'item1': 45.50, 'item2': 35, 'item3': 41.30, 'item4': 55, 'item5': 24}
+# findtop3(d)
+
+### Write a Python program to count number of items in a dictionary value that is a list.
+# def fun1(d):
+#     listvalues = list(d.values())
+#
+#     c = 0
+#     for x in listvalues:
+#         for item in x:
+#             c = c + 1
+#
+#     print(c)
+#
+#
+# d = {'Alex': ['subj1', 'subj2', 'subj3'], 'David': ['subj1', 'subj2']}
+# fun1(d)
+
+### Write a Python program to sort Counter by value.
+# Sample data : {'Math':81, 'Physics':83, 'Chemistry':87}
+# Expected data: [('Chemistry', 87), ('Physics', 83), ('Math', 81)]
+
+# def flipdict(d):
+#     fd = {}
+#     for x, y in d.items():
+#         fd[y] = x
+#
+#     return fd
+#
+#
+# def counterdict(d):
+#     myfd = flipdict(d)
+#     result = {}
+#     keylist = list(myfd.keys())
+#     sortedkeylist = sorted(keylist, reverse=True)
+#     for x in sortedkeylist:
+#         result[x] = myfd[x]
+#
+#     finalresult = flipdict(result)
+#     print(finalresult)
+#
+#     l = []
+#     for x, y in finalresult.items():
+#         t = (x, y)
+#         l.append(t)
+#     print(l)
+#
+#
+# d = {'Math': 81, 'Physics': 83, 'Chemistry': 87}
+# counterdict(d)
+
+### Write a Python program to create a dictionary from two lists without losing duplicate values.
+# Sample lists: ['Class-V', 'Class-VI', 'Class-VII', 'Class-VIII'], [1, 2, 2, 3]
+# Expected Output: defaultdict(<class 'set'>, {'Class-V': {1}, 'Class-VI': {2}, 'Class-VII': {2}, 'Class-VIII': {3}})
+#
+# def fun1(l1, l2):
+#     k = dict(zip(l1, l2))
+#     print(k)
+#
+# l1 = ['Class-V', 'Class-VI', 'Class-VII', 'Class-VIII']
+# l2 = [1, 2, 2, 3]
+# fun1(l1, l2)
+
+###  Write a Python program to replace dictionary values with their average.
+# student_details= [
+#   {'id' : 1, 'subject' : 'math', 'V' : 70, 'VI' : 82},
+#   {'id' : 2, 'subject' : 'math', 'V' : 73, 'VI' : 74},
+#   {'id' : 3, 'subject' : 'math', 'V' : 75, 'VI' : 86}
+# ]
+# def fun1(d):
+#     newlist = []
+#     for i in range(0, len(d)):
+#         new = {}
+#         v1 = d[i]['V']
+#         v2 = d[i]['VI']
+#         v = (v1 + v2) / 2
+#         new['id'] = d[i]['id']
+#         new['subject'] = d[i]['subject']
+#         new['V+VI'] = v
+#         newlist.append(new)
+#
+#     print(newlist)
+#
+# d = [
+#     {'id': 1, 'subject': 'math', 'V': 70, 'VI': 82},
+#     {'id': 2, 'subject': 'math', 'V': 73, 'VI': 74},
+#     {'id': 3, 'subject': 'math', 'V': 75, 'VI': 86}
+# ]
+# fun1(d)
+
+###  Write a Python program to match key values in two dictionaries.
+# Sample dictionary: d1 = {'key1': 1, 'key2': 3, 'key3': 2},d2 = {'key1': 1, 'key2': 2}
+# Expected output: key1: 1 is present in both d1 and d2
+
+# def fun1(d1, d2):
+#     for x in d1:
+#         if x in d2:
+#             if d2[x] == d1[x]:
+#                 print(f"{x} : {d1[x]} is present in both d1 and d2")
+#
+#
+# d1 = {'key1': 1, 'key2': 3, 'key3': 2}
+# d2 = {'key1': 1, 'key2': 2}
+# fun1(d1, d2)
+
