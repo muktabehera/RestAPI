@@ -1288,3 +1288,155 @@
 # d2 = {'key1': 1, 'key2': 2}
 # fun1(d1, d2)
 
+### Write a Python program to store a given dictionary in a json file.
+# Original dictionary:
+# {'students': [{'firstName': 'Nikki', 'lastName': 'Roysden'}, {'firstName': 'Mervin', 'lastName': 'Friedland'}, {'firstName': 'Aron ', 'lastName': 'Wilkins'}], 'teachers': [{'firstName': 'Amberly', 'lastName': 'Calico'}, {'firstName': 'Regine', 'lastName': 'Agtarap'}]}
+
+# import json
+#
+#
+# def fun1(d):
+#     j = json.dumps(d)
+#     # print(type(j))
+#     f = json.loads(j)
+#
+#     print(f)
+#
+#
+# d = {'students': [{'firstName': 'Nikki', 'lastName': 'Roysden'}, {'firstName': 'Mervin', 'lastName': 'Friedland'},
+#                   {'firstName': 'Aron ', 'lastName': 'Wilkins'}],
+#      'teachers': [{'firstName': 'Amberly', 'lastName': 'Calico'}, {'firstName': 'Regine', 'lastName': 'Agtarap'}]}
+# fun1(d)
+
+### Write a Python program to create a dictionary of keys x, y, and z where each key has as value a list from 11-20, 21-30, and 31-40 respectively. Access the fifth value of each key from the dictionary.
+#Output:
+# {'x': [11, 12, 13, 14, 15, 16, 17, 18, 19],
+# 'y': [21, 22, 23, 24, 25, 26, 27, 28, 29],
+# 'z': [31, 32, 33, 34, 35, 36, 37, 38, 39]}
+# 15
+# 25
+# 35
+# x has value [11, 12, 13, 14, 15, 16, 17, 18, 19]
+# y has value [21, 22, 23, 24, 25, 26, 27, 28, 29]
+# z has value [31, 32, 33, 34, 35, 36, 37, 38, 39]
+
+# d = {}
+# l1 = []
+# l2 = []
+# l3 = []
+# for x in range(11,20):
+#     l1.append(x)
+# for y in range(21,30):
+#     l2.append(y)
+# for z in range(31,40):
+#     l3.append(z)
+# d['x'] = l1
+# d['y'] = l2
+# d['z'] = l3
+# # Now access the fifth value of each key from the dictionary.
+# print(d['x'][4])
+# print(d['y'][4])
+# print(d['z'][4])
+# print(f"x has value {d['x']}")
+# print(f"y has value {d['y']}")
+# print(f"z has value {d['z']}")
+
+### Write a Python program to drop empty Items from a given Dictionary.
+# Original Dictionary:
+# {'c1': 'Red', 'c2': 'Green', 'c3': None, 'c4': None}
+# New Dictionary after dropping empty items:
+# {'c1': 'Red', 'c2': 'Green'}
+# def fun1(d):
+#     a = []
+#     for x in d:
+#         if d[x] == None:
+#             a.append(x)
+#
+#     for x in a:
+#         del d[x]
+#
+#     print(d)
+#
+# d = {'c1': 'Red', 'c2': 'Green', 'c3': None, 'c4': None}
+# fun1(d)
+
+### Write a Python program to filter a dictionary based on values.
+# Original Dictionary:
+# {'Cierra Vega': 175, 'Alden Cantrell': 180, 'Kierra Gentry': 165, 'Pierre Cox': 190}
+# Marks greater than 170:
+# {'Cierra Vega': 175, 'Alden Cantrell': 180, 'Pierre Cox': 190}
+# def fun1(d):
+#     fd = {}
+#     for x in d:
+#         if d[x] > 170:
+#             fd[x] = d[x]
+#
+#     print(fd)
+#
+# d = {'Cierra Vega': 175, 'Alden Cantrell': 180, 'Kierra Gentry': 165, 'Pierre Cox': 190}
+# fun1(d)
+
+### Write a Python program to convert more than one list to nested dictionary.
+# Original strings:
+# ['S001', 'S002', 'S003', 'S004']
+# ['Adina Park', 'Leyton Marsh', 'Duncan Boyle', 'Saim Richards']
+# [85, 98, 89, 92]
+# Nested dictionary:
+# [{'S001': {'Adina Park': 85}}, {'S002': {'Leyton Marsh': 98}}, {'S003': {'Duncan Boyle': 89}}, {'S004': {'Saim Richards': 92}}]
+# def fun1(l1, l2, l3):
+#     l = []
+#     for i in range(0, len(l1)):
+#         d = {}
+#         d1 = {}
+#         d1[l2[i]] = l3[i]
+#         d[l1[i]] = d1
+#         l.append(d)
+#
+#     print(l)
+#
+# l1 = ['S001', 'S002', 'S003', 'S004']
+# l2 = ['Adina Park', 'Leyton Marsh', 'Duncan Boyle', 'Saim Richards']
+# l3 = [85, 98, 89, 92]
+# fun1(l1, l2, l3)
+
+### Write a Python program to filter the height and width of students, which are stored in a dictionary.
+# Original Dictionary:
+# {'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)}
+# Height > 6ft and Weight> 70kg:
+# {'Cierra Vega': (6.2, 70)}
+# def fun1(d,h,w):
+#     a = {}
+#     for x in d:
+#         if d[x][0] >= 6.0 and d[x][1] >= 70:
+#             a[x] = d[x]
+#             print(a)
+#
+# d = {'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)}
+# h = 6
+# w = 70
+# fun1(d,h,w)
+
+### Write a Python program to check all values are same in a dictionary.
+# Original Dictionary:
+# {'Cierra Vega': 12, 'Alden Cantrell': 12, 'Kierra Gentry': 12, 'Pierre Cox': 12}
+# Check all are 12 in the dictionary.
+# True
+# Check all are 10 in the dictionary.
+# False
+# def checkvalue(d, v):
+#     n = len(d)
+#     c = 0
+#     for x in d:
+#         if d[x] == v:
+#             c = c + 1
+#
+#     if c == n:
+#         return True
+#     elif c != n:
+#         return False
+#
+#
+# d = {'Cierra Vega': 12, 'Alden Cantrell': 12, 'Kierra Gentry': 12, 'Pierre Cox': 12}
+# v = 12
+# print(checkvalue(d, v))
+
