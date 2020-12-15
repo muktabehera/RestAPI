@@ -1440,3 +1440,352 @@
 # v = 12
 # print(checkvalue(d, v))
 
+### Write a Python program to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return instead of the empty string.
+# Sample String : 'w3resource'
+# Expected Result : 'w3ce'
+# Sample String : 'w'
+# Expected Result : Empty String
+
+# def fun1(s):
+#     n = len(s)
+#     if n > 2:
+#         slice1 = s[0:2]
+#         slice2 = s[n-2:n]
+#         fs = slice1 + slice2
+#
+#         result = fs
+#     elif n < 2:
+#         result = "Empty String"
+#     return result
+#
+# s = 'w3resource'
+# print(fun1(s))
+
+### Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
+# Sample String : 'restart'
+# Expected Result : 'resta$t'
+# def fun1(s):
+#     l = list(s)
+#     l1 = l[0]
+#     for i in range(1, len(l)):
+#         if l[i] == l1:
+#             l[i] = '$'
+#
+#     print(l)
+#     print(''.join(l))
+#
+#
+# s = 'restart'
+# fun1(s)
+
+### Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string.
+# Sample String : 'abc', 'xyz'
+# Expected Result : 'xyc abz'
+# def fun1(s1,s2):
+#     l1 = list(s1)
+#     l2 = list(s2)
+#     x = l1[0:2]
+#     y = l2[0:2]
+#     l1[0:2] = y
+#     l2[0:2] = x
+#     fs1 = ''.join(l1)
+#     fs2 = ''.join(l2)
+#     fs = fs1 + ' ' + fs2
+#     print(fs)
+# s1 = 'abc'
+# s2 = 'xyz'
+# fun1(s1,s2)
+
+### Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.
+# Sample String : 'abc'
+# Expected Result : 'abcing'
+# Sample String : 'string'
+# Expected Result : 'stringly'
+# def fun1(s):
+#     # add 'ing' at the end of a given strin, if len is > 3
+#     # If the given string already ends with 'ing' then add 'ly' instead
+#     # If the string length of the given string is less than 3, leave it unchanged
+#     n = len(s)
+#     if n >= 3:
+#         if s[n - 3: n] == 'ing':
+#             print(s + 'ly')
+#         elif s[n - 3: n] != 'ing':
+#             print(s + 'ing')
+#
+#     elif n < 3:
+#         print(s)
+#
+#
+# s = 'string'
+# fun1(s)
+
+### Write a Python program to find the first appearance of the substring 'not' and 'poor' from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+# Sample String : 'The lyrics is not that poor!'
+# 'The lyrics is poor!'
+# Expected Result : 'The lyrics is good!'
+# 'The lyrics is poor!'
+# def fun1(s):
+#     s1 = s.find('not')
+#     # d1 = s.index('not')
+#     s2 = s.find('poor')
+#     if s1 < s2:
+#         s3 = s.replace(s[s1:s2+4], 'good')
+#     if s1 == -1:
+#         return s
+#     return s3
+#
+# s = 'The lyrics is not that poor!'
+# print(fun1(s))
+
+###  Write a Python function that takes a list of words and returns the length of the longest one.
+# Sample Output:
+# Longest word: Exercises
+# Length of the longest word: 9
+# def fun1(l):
+#     longword = []
+#     for x in l:
+#         n = len(x)
+#         longword.append(n)
+#     m = max(longword)
+#     i = longword.index(m)
+#     print(f"Longest word: {l[i]}")
+#     print(f"Length of the longest word: {m}")
+#
+# l = ["PHP", "Exercises", "Backend"]
+# fun1(l)
+
+###  Write a Python program to remove the nth index character from a nonempty string.
+# def fun1(s,n):
+#     l = list(s)
+#     l.pop(n)
+#     f = ''.join(l)
+#
+#     return f
+# s = "hello"
+# n = 3
+# print(fun1(s,n))
+
+###  Write a Python program to change a given string to a new string where the first and last chars have been exchanged.
+# def fun1(s):
+#     l = list(s)
+#     x = l[0]
+#     y = l[len(l) - 1]
+#
+#     l[0] = y
+#     l[len(l) - 1] = x
+#     print(''.join(l))
+# s = "everyday"
+# fun1(s)
+
+###  Write a Python program to remove the characters which have odd index values of a given string.
+# def fun1(s):
+#     l = list(s)
+#     a = []
+#     for i in range(0, len(l)):
+#         if i % 2 != 0:
+#             a.append(l[i])
+#
+#     for x in l:
+#         if x in a:
+#             l.remove(x)
+#     print(''.join(l))
+#
+# s = "allaboard"
+# fun1(s)
+
+###  Write a Python program to count the occurrences of each word in a given sentence.
+# def fun1(s):
+#     l = s.split()
+#     d = {}
+#     for x in l:
+#         y = l.count(x)
+#         d[x] = y
+#
+#     print(d)
+#
+#
+# s = "hello how are you how"
+# fun1(s)
+
+### Write a Python script that takes input from the user and displays that input back in upper and lower cases.
+# def fun1():
+#     s = input("please enter a string : ")
+#     print(f"Upper case for the input string is {s.upper()}")
+#     print(f"Lower case for the input string is {s.lower()}")
+# fun1()
+
+### Write a Python program that accepts a comma separated sequence of words as input and prints the unique words in sorted form (alphanumerically).
+# Sample Words : red, black, pink, green
+# Expected Result : black, green, pink, red
+# def fun1():
+#     d = input("Please input comma separated words:")
+#     l = d.split(',')
+#     l.sort()
+#     fd = ','.join(l)
+#     return fd
+# print(fun1())
+
+### Write a Python function to get a string made of 4 copies of the last two characters of a specified string (length must be at least 2).
+# Sample function and result :
+# insert_end('Python') -> onononon
+# # insert_end('Exercises') -> eseseses
+# def fun1(s):
+#     n = len(s)
+#     ls = s[n - 2:n]
+#     print(ls * 4)
+# fun1('Python')
+
+### Write a Python function to get a string made of its first three characters of a specified string. If the length of the string is less than 3 then return the original string.
+# Sample function and result :
+# first_three('ipy') -> ipy
+# first_three('python') -> pyt
+# def fun1(s):
+#     if len(s) < 3:
+#         return s
+#     elif len(s) >= 3:
+#             fs = s[0:3]
+#             return fs
+# print(fun1('py'))
+
+### Write a Python program to get the last part of a string before a specified character.
+# https://www.w3resource.com/python-exercises
+# https://www.w3resource.com/python
+# s = 'https://www.w3resource.com/python-exercises/string'
+# l = s.rsplit('/',1)
+# a = s.rsplit('-',1)
+# print(l[0])
+# print(a[0])
+
+### Write a Python function to reverses a string if it's length is a multiple of 4.
+# def fun1(s):
+#     if len(s) % 4 == 0:
+#         print(s[:: -1])
+# s = "hellollo"
+# fun1(s)
+# ### Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters
+# def fun1(s):
+#     s1 = s[0:4]
+#     c = 0
+#     for x in s1:
+#         if x.isupper() == True:
+#             c = c + 1
+#     if c >= 2:
+#         fs = s.upper()
+#         print(fs)
+#     elif c < 2:
+#         print("Not valid for conversion")
+# s = "hELlomy"
+# fun1(s)
+
+### Write a Python program to remove a newline in Python.
+# s = 'Python Exercises\n'
+# print(s)
+# print(s.rstrip())
+
+### Write a Python program to check whether a string starts with specified characters.
+# def fun1(s,c):
+#     if s[0] == c:
+#         print(f"The string starts with {c}")
+#     elif s[0] != c:
+#         print(f"The string does not start with {c}")
+# s = "hello"
+# c = 'e'
+# fun1(s,c)
+
+### Write a Python program to remove existing indentation from all of the lines in a given text.
+# s = "hello:hi:how:are:you"
+# s2 = s.replace(':',' ')
+# print(s2)
+
+### Write a Python program to sum all the items in a list.
+# def fun1(l):
+# #     s = sum(l)
+# #     return s
+# # l = [1,4,5]
+# # print(fun1(l))
+
+### Write a Python program to multiplies all the items in a list.
+# def fun1(l):
+#     m = 1
+#     for x in l:
+#         m = x*m
+#     print(m)
+# l = [4,5]
+# fun1(l)
+
+### Write a Python program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings.
+# Sample List : ['abc', 'xyz', 'aba', '1221']
+# Expected Result : 2
+# def fun1(l):
+#     a = []
+#     for x in l:
+#         if len(x) >= 2:
+#             a.append(x)
+#     c = 0
+#     for x in a:
+#         if x[0] == x[len(x)-1]:
+#             c = c + 1
+#     print(c)
+# l = ['abc', 'xyz', 'aba', '1221']
+# fun1(l)
+
+###  Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
+# Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+# Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+# def flip(l):
+#     fl = []
+#     for x in l:
+#         lx = list(x)
+#         a = lx[0]
+#         b = lx[1]
+#         lx[0] = b
+#         lx[1] = a
+#         t = tuple(lx)
+#         fl.append(t)
+#     return fl
+# l = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+# # flip(l)
+# def sortlist(l):
+#     mylist = flip(l)
+#     mylist.sort()
+#     finallist = flip(mylist)
+#     print(finallist)
+# sortlist(l)
+
+### Write a Python program to remove duplicates from a list.
+# l = [1,2,3,12,3,2,2]
+# a = []
+# for x in l:
+#     if l.count(x) == 1:
+#         a.append(x)
+#     elif l.count(x) > 1:
+#         if x not in a:
+#             a.append(x)
+# print(a)
+
+# Write a Python program to find the list of words that are longer than n from a given list of words.
+# def fun1(l):
+#     a = []
+#     for x in l:
+#         if len(x) >= n:
+#             a.append(x)
+#     print(a)
+# l = ["orange","red","lemoned"]
+# n = 6
+# fun1(l)
+
+# Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+# Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# Expected Output : ['Green', 'White', 'Black']
+# def fun1(l):
+#     x = []
+#     a = l[0]
+#     b = l[4]
+#     c = l[5]
+#     x.extend([a,b,c])
+#     print(x)
+#     for item in x:
+#         l.remove(item)
+#     print(l)
+# l = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# fun1(l)

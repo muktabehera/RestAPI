@@ -160,6 +160,11 @@ if __name__ == '__main__':
 # string to list with split words: string.split(" ")
     #s = "sun is bright"
     #k = s.split(" ") or s.split()
+# s.rsplit(), splits the string from right end
+    # s = 'https://www.w3resource.com/python-exercises/string'
+    # l = s.rsplit('/', 1)
+    # l[0] , result will be https://www.w3resource.com/python-exercises
+
 # string to list with split char:   list(str)
     #str = "mom"
     #list(str) will give result ["m","o","m"]
@@ -304,6 +309,13 @@ if __name__ == '__main__':
     # start	Optional. An Integer. The position to start the search. Default is 0
     # Optional. An Integer. The position to end the search. Default is the end of the string
 ### string.index(value) , finds the index of the first occurring value in string.
+### rindex() : Used to find the last occurrence of the substring
+    # txt = "Mi casa, su casa."
+    # x = txt.rindex("casa")
+    # print(x)
+
+
+
 
 ##Dictionary
 # Append to a dictionary:
@@ -357,5 +369,6 @@ if __name__ == '__main__':
 
 ### Summary:
 # LIST [sort,sorted(l,reverse = True), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index,reverse, list(reversed(seq_list)) , max, min, sum, clear(),len,sort, sorted(list), sorted(list,reverse = True)]
-# string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len]
+# string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len, rindex(), split(), rsplit()]
 # dict [ list(dict1.keys()), list(dict1.values(), del, pop(key), items(), clear(), dict(zip(list1,list2))  ]
+
