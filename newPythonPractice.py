@@ -861,7 +861,7 @@
 # n = 5
 # dicttest(n)
 
-###Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are square of keys. Go to the editor
+###Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are square of keys.
 # Sample Dictionary
 # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}
 # def dictsquare(n1, n2):
@@ -1104,7 +1104,7 @@
 # s = 'w3resource'
 # fun1(s)
 
-###Write a Python program to count the values associated with key in a dictionary. Go to the editor
+###Write a Python program to count the values associated with key in a dictionary.
 # Sample data: = [{'id': 1, 'success': True, 'name': 'Lary'}, {'id': 2, 'success': False, 'name': 'Rabi'}, {'id': 3, 'success': True, 'name': 'Alex'}]
 # Expected result: Count of how many dictionaries have success as True
 #
@@ -1165,26 +1165,34 @@
 # item1 45.5
 # item3 41.3
 
-# def findtop3(d):
+# def flip(d):
 #     fd = {}
-#     listkeys = list(d.keys())
-#     listvalues = list(d.values())
-#     n = 3
-#     while n >= 1:
-#         maxvalue = max(listvalues)
-#         # print(maxvalue)
-#         i = listvalues.index(maxvalue)
-#         key = listkeys[i]
-#         fd[key] = maxvalue
-#         # print(fd)
-#         listvalues.remove(maxvalue)
-#         n = n - 1
+#     for x, y in d.items():
+#         fd[y] = x
 #
-#     print(fd)
+#     return fd
+#
+#
+# def fun1(d, n):
+#     myfd = flip(d)
+#     myfdkey = list(myfd.keys())
+#     myfdkeysorted = sorted(myfdkey, reverse=True)
+#     myfdfinal = {}
+#     for x in myfdkeysorted:
+#         myfdfinal[x] = myfd[x]
+#     final = flip(myfdfinal)
+#     print(final)
+#
+#     count = 0
+#     for x, y in final.items():
+#         if count < n:
+#             print(x, y)
+#             count = count + 1
 #
 #
 # d = {'item1': 45.50, 'item2': 35, 'item3': 41.30, 'item4': 55, 'item5': 24}
-# findtop3(d)
+# n = 3
+# fun1(d, n)
 
 ### Write a Python program to count number of items in a dictionary value that is a list.
 # def fun1(d):
@@ -1788,4 +1796,26 @@
 #         l.remove(item)
 #     print(l)
 # l = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# fun1(l)
+
+# l = [3,5,4,1], find misiing i.e. 2
+# l = [3,5,4,1,0]
+# for i in range(0,6):
+#     if i not in l:
+#         print(i)
+
+#### l = ['flowing', 'flower', 'flight'], find common prefix
+# def fun1(l):
+#     a = []
+#     m = max(l)
+#     n = len(m)
+#     print(n)
+#     for i in range(0,n):
+#         if l[0][i] == l[1][i] == l[2][i]:
+#             a.append(l[0][i])
+#         elif (l[0][i] != l[1][i]) or (l[0][i] != l[2][i] ):
+#             break
+#     print(a)
+#
+# l = ['flowing', 'flower', 'flowight']
 # fun1(l)
