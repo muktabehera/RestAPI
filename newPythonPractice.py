@@ -81,16 +81,15 @@
 # checkpalindrome(s)
 
 ##Write Python code to sort a numerical dataset?
-
-# class test():
-#     def sort(self,l):
-#         #l = [1,2,3,4,5,8,1,2,3,4,5]
-#         l.sort()
-#         print(f"the sorted list is {l}")
-#
-# a = test()
-# l = [1,2,3,4,5,8,1,2,3,4,5]
-# a.sort(l)
+# class data():
+#     def fun1(self,l):
+#         dl = sorted(l, reverse = True)
+#         print(f"descending order of the set is {dl}")
+#         al = sorted(l)
+#         print(f"Ascending order of the set is {al}")
+# l = [2,4,5,3,1]
+# a = data()
+# a.fun1(l)
 
 ### Write Python code to sort a numerical dataset without using sort function.
 #
@@ -149,46 +148,18 @@
 # size()
 
 ## Find the most frequent/recurring value in a list
-# class test():
-#     def frequestValue(self):
-#         l = ['a','b','c','d','a','a','b','c','e','f']
-#         dict = {}
-#         for x in l:
-#             c = l.count(x)
-#             #append key value pair to dict
-#             dict[x]=c
-#         print(dict) # {'a': 3, 'b': 2, 'c': 2, 'd': 1, 'e': 1, 'f': 1}
+# def fun1(l):
+#     d = {}
+#     for x in l:
+#         d[x] = l.count(x)
+#     valuelist = list(d.values())
+#     keylist = list(d.keys())
+#     m = max(valuelist)
+#     i = valuelist.index(m)
+#     print(keylist[i])
 #
-#         # make list of keys from dict , i.e.['a', 'b', 'c', 'd', 'e', 'f']
-#         keys = list(dict.keys())
-#         print(keys)
-#
-#         #make list of values from dict, i.e. [3, 2, 2, 1, 1, 1]
-#         values = list(dict.values())
-#         print(values)
-#
-#         # store it in another list
-#         valueoriginal = list()
-#         for x in values:
-#             valueoriginal.append(x)
-#         print(valueoriginal)
-#
-#         # find the max numbers it occurred
-#         values.sort()
-#         print(values)
-#         maxvalue = values[len(values)-1]
-#         print(maxvalue)
-#
-#         #find index for max value from 'original values list
-#         myindex = valueoriginal.index(maxvalue)
-#         print(myindex)
-#
-#         #find the key having myindex from list 'keys'
-#         answer = keys[myindex]
-#         print(f"the max occurring value is '{answer}'")
-#
-# a = test()
-# a.frequestValue()
+# l = [3,4,5,3,4,5,3,5,5]
+# fun1(l)
 
 
 ## Checking whether the two words are anagrams or not[A word can be formed by rearranging the letters of another]
@@ -222,18 +193,23 @@
 # a.anagram()
 
 #OR
-# class test():
-#     def anagram(self):
-#         s1 = "cinema"
-#         s2 = "iceman"
-#         if len(s1)==len(s2):
-#             for x in s1:
-#                 if x in s2:
-#                     pass
-#             print("yes it is anagram")
+# def fun1(s1, s2):
+#     result = 0
+#     for x in s1:
+#         if x in s2:
+#             pass
+#             if len(s1) == len(s2):
+#                 result = 1
+#     else:
+#         result = 0
 #
-# a = test()
-# a.anagram()
+#     if result == 1:
+#         print("Yes anagrams")
+#     if result == 0:
+#         print("No not anagrams")
+# s1 = "cinema"
+# s2 = "icemann"
+# fun1(s1, s2)
 
 
 ##Print the file path of imported modules
@@ -362,6 +338,16 @@
 
 # s = "hi you"
 # lengthofLastword(s)
+# OR
+# def fun1(s):
+#     l = s.split(' ')
+#     if len(l) <= 1:
+#         return 0
+#     elif len(l) > 1:
+#         n = l.pop()
+#         return len(n)
+# s = "how are you"
+# print(fun1(s))
 
 ### You are given a string s, return the number of segments in the string.
 # A segment is defined to be a contiguous sequence of non-space characters.
@@ -483,6 +469,8 @@
 #     address_response = requests.get(url=url, headers=headers)
 #
 #     r = json.loads(address_response.text)
+#     OR
+#     r = json.dumps(address_response.text) ## if address_response.text is string
 #
 #     ans = r[0]['components']['state_abbreviation']
 #
@@ -498,8 +486,8 @@
 #
 # pytest.main()
 
-#### 31: 1 Qrt (25), 1 nickle (5), 1 pennie (1) [dime 10]
-# num_coins(cents) ==> 3
+# #### cents = 31  , output : num_coins(cents) ==> 3
+# hint: : 1 Qrt (25), 1 nickle (5),1 dime (10) 1 pennie (1)
 
 # def coin(cents):
 #     count = 0
@@ -587,6 +575,24 @@
     ### a|b  # result is "Counter({3: 3, 2: 2, 4: 2})", returns the pair of keys and the highest recurring value
     ### a&b # result is "Counter({3: 1, 4: 1, 5: 1})", returns the pair of keys and the lowest recurring value.
 
+# OR
+# l1 = [2,2,3,3,3,4]
+# l2 = [2,2,3,4,4]
+# d1 = {}
+# d2 = {}
+# for x in l1:
+#     d1[x] = l1.count(x)
+# for y in l2:
+#     d2[y] = l2.count(y)
+# d3 = {}
+# for x in d1:
+#     if x in d2:
+#         m = max(d1[x],d2[x]) # min in case lowest occurring
+#         d3[x] = m
+# print(d3)  , result {2: 2, 3: 3, 4: 2} or {2: 2, 3: 1, 4: 1}
+
+
+
 ### Sorting in ascesnding order "Selection sort"
 
 # def ascsort(l):
@@ -608,7 +614,7 @@
 # ascsort(l)
 
 #### Target ==>
-### [14,13, 6, 4, 1,2] with target 3 print 1 and 3 in a list
+### [14,13, 6, 4, 1,2] with target 3 print 1 and 2 in a list
 
 # def target(l, t):
 #     l2 = l.copy()
@@ -631,6 +637,18 @@
 # l = [1, 5, 6, 2, 4]
 # t = 11
 # print(target(l, t))
+# OR
+# def fun1(l,t):
+#     for x in l:
+#         a = []
+#         for y in l:
+#             if x != y:
+#                 if x + y == t:
+#                     a.extend([x,y])
+#     print(a)
+# l = [14,13, 6, 4, 1,2]
+# t = 8
+# fun1(l,t)
 
 # ####Q==> Create a new dictionary by extracting the following keys from a given dictionary
 ## keys to extract ["name", "salary"]
@@ -719,6 +737,27 @@
 #
 # l1 = [[6, 4, 7, [9, 5, 4, [2, 4, 8]]], [2, 2, 7], [9, 0, 7, [9, 3, 1, 8, 5]]]
 # fun1(l1)
+# OR
+# def fun1(l):
+#     a = []
+#     for x in l:
+#         if type(x) != type(list()):
+#             a.append(x)
+#         elif type(x) == type(list()):
+#             for x1 in x:
+#                 if type(x1) != type(list()):
+#                     a.append(x1)
+#                 elif type(x1) == type(list()):
+#                     for x2 in x1:
+#                         if type(x2) != type(list()):
+#                             a.append(x2)
+#                         elif type(x2) == type(list()):
+#                             for x3 in x2:
+#                                 if type(x3) != type(list()):
+#                                     a.append(x3)
+#     print(a)
+# l = [[6,4,7,[9,5,4,[2,4,8]]],[2,2,7],[9,0,7,[9,3,1,8,5]]]
+# fun1(l)
 
 ### Given a list and a integers N. At every nth reverse the list
 # n = 3, input: [1,2,3,4,5,6,7,8], output = [3,2,1,6,5,4,8,7]
@@ -740,8 +779,22 @@
 #         f.extend(l)
 #
 #     print(f)
+# l = [1, 2, 3, 4, 5, 6, 7, 8]
+# n = 3
+# fun1(l, n)
+# OR
+# def fun1(l, n):
+#     a = []
+#     while len(l) >= n:
+#         x = l[0:n]
+#         x.reverse()
+#         a.extend(x)
+#         del l[0:n]
+#     else:
+#         l.reverse()
+#         a.extend(l)
 #
-#
+#     print(a)
 # l = [1, 2, 3, 4, 5, 6, 7, 8]
 # n = 3
 # fun1(l, n)
@@ -848,7 +901,7 @@
 # d = {'a': 1, 'b': 2}
 # fun1(d)
 
-###Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x). Go to the editor
+###Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).
 # Sample Dictionary ( n = 5) :
 # Expected Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 # def dicttest(n):
@@ -905,6 +958,11 @@
 #
 #     sumitems = sumkey + sumvalue
 #     print(f"sum of keys in the dict is {sumitems}")
+#       OR
+#     sumitems = 0
+#     for x,y in d.items():
+#       sumitems = sumitems + x + y
+#     print( f"sum of keys in the dict is {sumitems}"
 #
 # d = {1: 2, 3: 4, 5: 6, 7: 8}
 # summing(d)
@@ -1033,7 +1091,7 @@
 # d2 = {'a': 300, 'b': 200, 'd': 400}
 # dictnew(d1, d2)
 
-###Write a Python program to print all unique values in a dictionary. Go to the editor
+###Write a Python program to print all unique values in a dictionary.
 # Sample Data : [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
 # Expected Output : Unique Values: {'S005', 'S002', 'S007', 'S001', 'S009'}
 #
@@ -1054,6 +1112,17 @@
 #
 # d = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {"V": "S009"}, {"VIII": "S007"}]
 # test(d)
+# OR:
+# def fun1(l):
+#     a = []
+#     for x in l:
+#         for key in x:
+#             if x[key] not in a:
+#                 a.append(x[key])
+#     print(a)
+# l = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+# fun1(l)
+
 
 ### Write a Python program to find the highest 3 values in a dictionary.
 # def fun1(d):
@@ -1087,6 +1156,22 @@
 # ]
 #
 # fun1(d)
+# OR
+# def fun1(d):
+#     fd = {}
+#     for i in range(0,len(d)):
+#         k = d[i]['item']
+#         v = d[i]['amount']
+#         if k not in fd:
+#             fd[k] = v
+#         elif k in fd:
+#             v2 = fd[k] + v
+#             fd[k] = v2
+#
+#     print(fd)
+# d = [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, {'item': 'item1', 'amount': 750}]
+# fun1(d)
+
 
 ### Write a Python program to create a dictionary from a string.
 # Note: Track the count of the letters from the string.
