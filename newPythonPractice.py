@@ -1338,6 +1338,20 @@
 # l1 = ['Class-V', 'Class-VI', 'Class-VII', 'Class-VIII']
 # l2 = [1, 2, 2, 3]
 # fun1(l1, l2)
+# OR:
+# def fun1(l1, l2):
+#     f = {}
+#     for i in range(0, len(l1)):
+#         if l1[i] not in f:
+#             f[l1[i]] = l2[i]
+#         elif l1[i] in f:
+#             v = [f[l1[i]], l2[i]]
+#             f[l1[i]] = v
+#
+#     print(f)
+# l1 = ['Class-V', 'Class-VI', 'Class-VII', 'Class-VIII', 'Class-V']
+# l2 = [1, 2, 2, 3, 1]
+# fun1(l1, l2)
 
 ###  Write a Python program to replace dictionary values with their average.
 # student_details= [
