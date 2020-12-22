@@ -367,6 +367,88 @@ if __name__ == '__main__':
     # s = 20*2 , result is 40, multiplication
     # s = 20**2 , result is 400   , Exponent i.e. 20 to the power of 2
 
+# ZIP **********************************************
+# The zip() function returns a zip object, which is an iterator of tuples where the first item in each passed
+# iterator is paired together, and then the second item in each passed iterator are paired together etc.
+# If the passed iterators have different lengths, the iterator with the least items decides the length of the
+# new iterator.
+### 1. lists, tuples, or strings :
+# numbers = [1, 2, 3]
+# letters = ['a', 'b', 'c']
+# l =  list(zip(numbers,letters))
+# print(l)  # [(1, 'a'), (2, 'b'), (3, 'c')]
+
+# numbers = (1, 2, 3)
+# letters = ('a', 'b', 'c')
+# l =  list(zip(numbers,letters))
+# print(l)  # [(1, 'a'), (2, 'b'), (3, 'c')]
+
+# s = "test"
+# s2  = "hello"
+# l = list(zip(s,s2))
+# print(l) # [('t', 'h'), ('e', 'e'), ('s', 'l'), ('t', 'l')]
+
+### 2. set objects ( which don’t keep their elements in any particular )
+# s1 = {2, 3, 1}
+# s2 = {'b', 'a', 'c'}
+# l = list(zip(s1, s2))
+# print(l) #[(1, 'c'), (2, 'a'), (3, 'b')]
+
+### 3.
+# integers = [1, 2, 3]
+# letters = ['a', 'b', 'c']
+# floats = [4.0, 5.0, 6.0]
+# zipped = zip(integers, letters, floats)  # Three input iterables
+# l = list(zipped)
+# print(l)   #[(1, 'a', 4.0), (2, 'b', 5.0), (3, 'c', 6.0)]
+
+### 4. If trailing or unmatched values are important to you, then you can use itertools.zip_longest() instead of zip()
+# from itertools import zip_longest
+# numbers = [1, 2, 3]
+# letters = ['a', 'b', 'c']
+# longest = range(5)
+# zipped = zip_longest(numbers, letters, longest, fillvalue='?')
+# l = list(zipped)
+# print(l)   #[(1, 'a', 0), (2, 'b', 1), (3, 'c', 2), ('?', '?', 3), ('?', '?', 4)]
+
+### 5. creating dictionary
+# l = [1,2,3]
+# v = ['a','b','c']
+# d =  dict(zip(l,v))
+# print(d)   # {1: 'a', 2: 'b', 3: 'c'}
+
+### 6. Traversing Lists in Parallel
+# letters = ['a', 'b', 'c']
+# numbers = [0, 1, 2]
+# for l, n in zip(letters, numbers):
+#     print(f'Letter: {l}')
+#     print(f'Number: {n}')
+
+### 7. Traversing Dictionaries in Parallel
+# dict_one = {'name': 'John', 'last_name': 'Doe', 'job': 'Python Consultant'}
+# dict_two = {'name': 'Jane', 'last_name': 'Doe', 'job': 'Community Manager'}
+# for (k1, v1), (k2, v2) in zip(dict_one.items(), dict_two.items()):
+#     print(k1, '->', v1)
+#     print(k2, '->', v2)
+
+### 8. Unzipping a Sequence [  you can use zip() along with the unpacking operator * ]
+# pairs = [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+# numbers, letters = zip(*pairs)
+# print(numbers)  # (1, 2, 3, 4)
+# print(letters) # ('a', 'b', 'c', 'd')
+
+## l = ["flower","flow","flight"]
+## a = []
+## for item in zip(*l):
+##    a.append(item)
+## print(a)
+
+
+
+
+
+
+
 ### Summary:
 # LIST [sort,sorted(l,reverse = True), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index,reverse, list(reversed(seq_list)) , max, min, sum, clear(),len,sort, sorted(list), sorted(list,reverse = True)]
 # string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len, rindex(), split(), rsplit()]

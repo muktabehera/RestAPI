@@ -1660,6 +1660,15 @@
 #
 # l = ["PHP", "Exercises", "Backend"]
 # fun1(l)
+# OR
+# def longest(s):
+#     maxl = 0
+#     for item in s:
+#         l = len(item)
+#         maxl = max(l,maxl)
+#     print(maxl)
+# s = ['string','longinging','longest']
+# longest(s)
 
 ###  Write a Python program to remove the nth index character from a nonempty string.
 # def fun1(s,n):
@@ -1769,6 +1778,17 @@
 #         print(s[:: -1])
 # s = "hellollo"
 # fun1(s)
+#OR
+# def fun1(s):
+#     if len(s)%4 == 0:
+#         l = list(s)
+#         l.reverse()
+#         print(''.join(l))
+#     elif len(s)%4 != 0:
+#         print(s)
+# s = "rtghtyu"
+# fun1(s)
+
 # ### Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters
 # def fun1(s):
 #     s1 = s[0:4]
@@ -1896,6 +1916,17 @@
 #     print(l)
 # l = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 # fun1(l)
+# OR:
+# def fun1(l):
+#     a = []
+#     for i in range(0, len(l)):
+#         if i in (0, 4, 5):
+#             a.append(l[i])
+#     for item in a:
+#         l.remove(item)
+#     print(l)
+# l = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow', 'orange']
+# fun1(l)
 
 # l = [3,5,4,1], find misiing i.e. 2
 # l = [3,5,4,1,0]
@@ -1906,15 +1937,18 @@
 #### l = ['flowing', 'flower', 'flight'], find common prefix
 # def fun1(l):
 #     a = []
-#     m = max(l)
-#     n = len(m)
-#     print(n)
-#     for i in range(0,n):
-#         if l[0][i] == l[1][i] == l[2][i]:
-#             a.append(l[0][i])
-#         elif (l[0][i] != l[1][i]) or (l[0][i] != l[2][i] ):
-#             break
-#     print(a)
+#     # break words into groups using `zip` and `*`
+#     # ["flower","flow","flight"] becomes:
+#     # (('f', 'f', 'f'), ('l', 'l', 'l'), ('o', 'o', 'i'), ('w', 'w', 'g'))
+#     for item in zip(*l):
+#         a.append(item)
+#     prefix = []
+#     for item in a:
+#         if len(item) == item.count(item[0]):
+#             prefix.append(item[0])
+#     print(prefix)
 #
-# l = ['flowing', 'flower', 'flowight']
+#
+# l = ['flowing', 'flower', 'flight']
 # fun1(l)
+
