@@ -183,12 +183,6 @@ if __name__ == '__main__':
     # print(list(reversed(seq_list)))
 
 
-# if (string.find(sub_str) == -1): *string.find(sub_str, start, end)
-#         print("NO")
-#     else:
-#         print("YES")
-#dictionary: sorted(dict)
-
 #Exception handling:::
 # def exceptionhandling():
 #   try:
@@ -198,7 +192,6 @@ if __name__ == '__main__':
         #print("Key not found")
 #   finally:
         #print("please try again with different key")
-
 
 
 #A simple class:
@@ -225,6 +218,12 @@ if __name__ == '__main__':
     # s2 = 'hello world now'
     # s1.find('world',2,-2) will search string within 'llo world n', note:index starts with 0. If substring exists returns index else returns -1
     # s1.find('hell',0,10)
+
+# if (string.find(sub_str) == -1):
+#         print("NO")
+#     else:
+#         print("YES")
+
 ## lower() / upper() , converts string to lower/upper
     # str = 'XYZ'
     # print(str.lower())
@@ -309,11 +308,14 @@ if __name__ == '__main__':
     # start	Optional. An Integer. The position to start the search. Default is 0
     # Optional. An Integer. The position to end the search. Default is the end of the string
 ### string.index(value) , finds the index of the first occurring value in string.
-### rindex() : Used to find the last occurrence of the substring
+### rindex() : Used to find the index of the last occurrence value in string
     # txt = "Mi casa, su casa."
     # x = txt.rindex("casa")
     # print(x)
-
+# rsplit(), splits the string from right end
+    # s = 'https://www.w3resource.com/python-exercises/string'
+    # l = s.rsplit('/', 1)
+    # l[0] , result will be https://www.w3resource.com/python-exercises
 
 
 
@@ -359,6 +361,18 @@ if __name__ == '__main__':
 # How to find key,value from dictionary:
     # for key,value in dict.items():
     # print(key,value)
+# update()
+    # dict1 = {'Name': 'Zara', 'Age': 7}
+    # dict2 = {'Sex': 'female' }
+    # dict1.update(dict2)
+    # print(dict1)  # {'Name': 'Zara', 'Age': 7, 'Sex': 'female'}
+# sorted(dict)
+    # d1 = {1:2,5:6,3:4}
+    # d2 = sorted(d1)
+    # print(d2)  # [1,3,5]
+    # d3 = sorted(d1,reverse = True)
+    # print(d3)  # [5,3,1]
+
 
 ## Operator:
     # s = 20%2 , result is 0  , mod
@@ -372,7 +386,7 @@ if __name__ == '__main__':
 # iterator is paired together, and then the second item in each passed iterator are paired together etc.
 # If the passed iterators have different lengths, the iterator with the least items decides the length of the
 # new iterator.
-### 1. lists, tuples, or strings :
+### 1. lists, tuples, or strings can be zip :
 # numbers = [1, 2, 3]
 # letters = ['a', 'b', 'c']
 # l =  list(zip(numbers,letters))
@@ -388,13 +402,13 @@ if __name__ == '__main__':
 # l = list(zip(s,s2))
 # print(l) # [('t', 'h'), ('e', 'e'), ('s', 'l'), ('t', 'l')]
 
-### 2. set objects ( which don’t keep their elements in any particular )
+### 2. set objects ( which don’t keep their elements in any particular order) can be zip
 # s1 = {2, 3, 1}
 # s2 = {'b', 'a', 'c'}
 # l = list(zip(s1, s2))
 # print(l) #[(1, 'c'), (2, 'a'), (3, 'b')]
 
-### 3.
+### 3. Multiple iterators can be zip
 # integers = [1, 2, 3]
 # letters = ['a', 'b', 'c']
 # floats = [4.0, 5.0, 6.0]
@@ -443,7 +457,25 @@ if __name__ == '__main__':
 ##    a.append(item)
 ## print(a)
 
+### 9. Sorting simultaneously
+# letters = ['b', 'a', 'd', 'c']
+# numbers = [2, 4, 3, 1]
+# data1 = list(zip(letters, numbers))
+# print(data1)
+# data1.sort()
+# print(data1)
+## OR
+# letters = ['b', 'a', 'd', 'c']
+# numbers = [2, 4, 3, 1]
+# data = sorted(zip(letters, numbers))
+# print(data)
 
+# 10 . You can also update an existing dictionary by combining zip() with dict.update()
+# a_dict = {'name': 'John', 'last_name': 'Doe', 'age': '45', 'job': 'Python Developer'}
+# new_job = ['Python Consultant']
+# field = ['job']
+# a_dict.update(zip(field, new_job))
+# print(a_dict)    # {'name': 'John', 'last_name': 'Doe', 'age': '45', 'job': 'Python Consultant'}
 
 
 
@@ -452,5 +484,5 @@ if __name__ == '__main__':
 ### Summary:
 # LIST [sort,sorted(l,reverse = True), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index,reverse, list(reversed(seq_list)) , max, min, sum, clear(),len,sort, sorted(list), sorted(list,reverse = True)]
 # string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len, rindex(), split(), rsplit()]
-# dict [ list(dict1.keys()), list(dict1.values(), del, pop(key), items(), clear(), dict(zip(list1,list2))  ]
+# dict [ list(dict1.keys()), list(dict1.values(), del, pop(key), items(), clear(), dict(zip(list1,list2)) , dict1.update(dict2) ]
 
