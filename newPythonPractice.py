@@ -1,5 +1,5 @@
 ## Write a program to display the Fibonacci sequence in Python?
-# 0,1,2,3,5,8,13 etc
+# 0,1,1,2,3,5,8,13 etc
 #class practice():
     # def fibonacci(self,n):
     #     #n = 10
@@ -25,28 +25,34 @@
 
 ##Given number is prime number or not. [ note - 2 is divisible by 2 and is still prime]
 # Note: A number divisible by 1 and itself only is prime. So if it is divisible by any other number its not prime.
-# def primetest(n):
+# def testPrime(n):
 #     # check if n is greater than 2:
 #     # if greater than 2 test n%i in range 2,n
-#
-#     if n > 2:
-#         result = 1
+
+#     if n == 2:
+#         print(f"{n} is a prime number")
+
+#     elif n < 2:
+#         print("Please enter a number greater than 2")
+
+#     elif n > 2:
 #         for i in range(2, n):
 #             if n % i == 0:
-#                 result = 0
+#                 result = "not prime"
+#                 break
+#             else:
+#                 result = "prime"
 #
-#         if result == 0:
-#             print("Not Prime")
+#     if result == "not prime":
+#         print(f"{n} is not a prime number")
 #
-#         elif result == 1:
-#             print("Prime")
-#
-#
+#     if result == "prime":
+#         print(f"{n} is a prime number")
 # n = 99
-# primetest(n)
+# fun1(n)
 
 ##Write Python code to check the given sequence is a palindrome or not?
-#mom
+#mom, madam, nurses run
 
 # class test():
 #     def palindrome(self):
@@ -75,10 +81,19 @@
 #         print("Palindrome")
 #     else:
 #         print("No not a palindrome")
-
-
 # s = "mom"
 # checkpalindrome(s)
+## OR:
+# def checkpalindrome(s):
+#     fs = s.replace(" ", "")
+#     rev_fs = fs[:: -1]
+#     if fs == rev_fs:
+#         print("Palindrome")
+#     else:
+#         print("Not Plaindrome")
+# s = "nurses run"
+# checkpalindrome(s)
+
 
 ##Write Python code to sort a numerical dataset?
 # class data():
@@ -575,7 +590,7 @@
     ### a|b  # result is "Counter({3: 3, 2: 2, 4: 2})", returns the pair of keys and the highest recurring value
     ### a&b # result is "Counter({3: 1, 4: 1, 5: 1})", returns the pair of keys and the lowest recurring value.
 
-# OR
+# OR Given two lists, find the pair of keys and the highest/lowest recurring value
 # l1 = [2,2,3,3,3,4]
 # l2 = [2,2,3,4,4]
 # d1 = {}
@@ -707,10 +722,22 @@
 #         a.append(smax)
 #
 #     print(a)
-#
-#
 # l = [1, 2, 3, 4, 5]
 # prod(l)
+## OR
+# def product(l):
+#     a = []
+#     for x in l:
+#         m = 1
+#         for y in l:
+#             if l.index(x) != l.index(y):
+#                 m = m * y
+#         a.append(m)
+#
+#     print(a)
+# l = [1, 2, 3, 4, 5]
+# product(l)
+
 
 #### Given an array consisting many inner arrays, flatten the array into one: example: input: [[6,4,7,[9,5,4,[2,4,8]]],[2,2,7],[9,0,7,[9,3,1,8,5]]] output: [6,4,7,9,5,4,2,4,8,2,2,7,9,0,7,9,3,1,8,5]
 
@@ -1951,4 +1978,181 @@
 #
 # l = ['flowing', 'flower', 'flight']
 # fun1(l)
+
+### Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+# Input: [0,1,0,3,12]
+# Output: [1,3,12,0,0]
+# def fun1(l):
+#     for item in l:
+#         if item == 0:
+#             l.remove(0)
+#             l.append(0)
+#     print(l)
+# l = [0,1,0,3,12]
+# fun1(l)
+
+###Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
+# Input: [3,1,2,4]
+# Output: [2,4,3,1]
+# def fun1(l):
+#     a = []
+#     for item in l:
+#         if item%2 == 0:
+#             a.append(item)
+#     for item in l:
+#         if item%2 != 0:
+#             a.append(item)
+#     print(a)
+# l = [3,1,2,4]
+# fun1(l)
+
+###Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once. Find all the elements of [1, n] inclusive that do not appear in this array.
+# Input: [4,3,2,7,8,2,3,1]
+# Output: [5,6]
+# def fun1(l):
+#     a = []
+#     for i in range(1,len(l)+1):
+#         if i not in l:
+#             a.append(i)
+#     print(a)
+# l = [4,3,2,7,8,2,3,1]
+# fun1(l)
+
+###Given a m * n matrix grid which is sorted in non-increasing order both row-wise and column-wise. Return the number of negative numbers in grid.
+# Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+# Output: 8
+# Explanation: There are 8 negatives number in the matrix.
+# def fun1(l):
+#     a = []
+#     for item in l:
+#         for x in item:
+#             if x < 1:
+#                 a.append(x)
+#     print(len(a))
+# l = [[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]]
+# fun1(l)
+
+###Given an array A of non-negative integers, half of the integers in A are odd, and half of the integers are even. Sort the array so that whenever A[i] is odd, i is odd; and whenever A[i] is even, i is even.
+# Input: [4,2,5,7]
+# Output: [4,5,2,7]
+# def fun1(l):
+#     even = []
+#     odd = []
+#     for item in l:
+#         if item%2 == 0:
+#             even.append(item)
+#     for item in l:
+#         if item%2 != 0:
+#             odd.append(item)
+#     i = 0
+#     for item in even:
+#         odd.insert(i,item)
+#         i = i + 2
+#     print(odd)
+# l = [4,2,5,7]
+# fun1(l)
+
+###Given a string S, we can transform every letter individually to be lowercase or uppercase to create another string. Return a list of all possible strings we could create. You can return the output in any order.
+# Input: S = "a1b2"
+# Output: ["a1b2","a1B2","A1b2","A1B2"]
+# def fun1(s):
+#     upper_s = []
+#     lower_s = []
+#
+#     for i in range(0, len(s)):
+#         upper_s.append(s[i].upper())
+#         lower_s.append(s[i].lower())
+#
+#     print(''.join(upper_s), ''.join(lower_s), end=" ")
+#
+#     half = []
+#     for i in range(len(s) // 2, len(s)):
+#         half.append(s[i].upper())
+#     strhalf = ''.join(half)
+#     full1 = s[0:len(s) // 2] + strhalf
+#
+#     otherhalf = []
+#     for i in range(0, len(s) // 2):
+#         otherhalf.append(s[i].upper())
+#     strotherhalf = ''.join(otherhalf)
+#     full2 = strotherhalf + s[len(s) // 2:len(s)]
+#
+#     print(full1, full2)
+# s = "a1b2"
+# fun1(s)
+
+###Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters. Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
+# Input: s = "abccccdd"
+# Output: 7
+# Explanation:
+# One longest palindrome that can be built is "dccaccd", whose length is 7.
+# def fun1(s):
+#     a = []
+#     b = []
+#     c = []
+#     for i in range(0, len(s)):
+#
+#         if s.count(s[i]) == 2:
+#             a.append(s[i])
+#     elif s.count(s[i]) < 2:
+#     b.append(s[i])
+#
+# elif s.count(s[i]) > 2:
+# c.append(s[i])
+# print(a, b, c)
+#
+# l = []
+# l.extend(a)
+# l.insert(1, c)
+# print(l)
+# l1 = []
+# for item in l:
+#
+#     if type(item) == type([]):
+#         l1.extend(item)
+#     elif type(item) != type([]):
+#         l1.append(item)
+#
+# mid = len(l1) // 2
+# l1.insert(mid, b[0])
+# print(''.join(l1))
+# print(len(l1))
+# s = "abccccdd"
+# fun1(s)
+
+
+### Given a string S of lowercase letters, a duplicate removal consists of choosing two adjacent and equal letters, and removing them.
+# We repeatedly make duplicate removals on S until we no longer can. Return the final string after all such duplicate removals have been made.
+# It is guaranteed the answer is unique.
+# class Solution:
+#     def removeDuplicates(self, S: str) -> str:
+#         # find the item having count more than 2
+#         # if adjacent delete
+#         l = list(S)
+#         a = []
+#         for item in l:
+#             if item not in a:
+#                 if l.count(item) >= 2:
+#                     a.append(item)
+#         # print(a)
+#         for item in a:
+#             i = l.index(item)
+#             if l[i + 1] == item:
+#                 # print(l[i],l[i+1])
+#                 l.pop(i)
+#                 l.pop(i)
+#                 a.remove(item)
+#                 if len(a) > 0:
+#                     for item in a:
+#                         i = l.index(item)
+#                         if l[i + 1] == item:
+#                             # print(l[i],l[i+1])
+#                             l.pop(i)
+#                             l.pop(i)
+#                             a.remove(item)
+#                 elif len(a) == 0:
+#                     break
+#
+#         return ''.join(l)
+
 
