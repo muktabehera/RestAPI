@@ -1028,7 +1028,7 @@
 # d = {'b': 2, 'a': 3}
 # fun1(key, d)
 
-###Write a Python program to map two lists into a dictionary.
+###Write a Python program to zip two lists into a dictionary.
 # def dictfromlist(l1,l2):
 #     newdict = dict(zip(l1,l2))
 #     print(newdict)
@@ -1082,12 +1082,10 @@
 
 ###Write a Python program to check a dictionary is empty or not.
 # def check(d):
-#     d2 = {}
-#
-#     if d == d2:
+#     if d == {}:
 #         print("Yes it is an empty dictionary")
 #
-#     elif d != d2:
+#     elif:
 #         print("No it is not an empty dictionary")
 #
 #
@@ -1365,7 +1363,7 @@
 # l1 = ['Class-V', 'Class-VI', 'Class-VII', 'Class-VIII']
 # l2 = [1, 2, 2, 3]
 # fun1(l1, l2)
-# OR:
+# OR: create a dictionary from two lists without losing duplicate keys values:
 # def fun1(l1, l2):
 #     f = {}
 #     for i in range(0, len(l1)):
