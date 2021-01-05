@@ -1773,10 +1773,14 @@
 # insert_end('Python') -> onononon
 # # insert_end('Exercises') -> eseseses
 # def fun1(s):
-#     n = len(s)
-#     ls = s[n - 2:n]
-#     print(ls * 4)
-# fun1('Python')
+#     if len(s) >= 2:
+#         l = len(s)
+#         last = s[l-2: l]
+#         print(last*4)
+#     else:
+#         print(s)
+# s = "hello"
+# fun1(s)
 
 ### Write a Python function to get a string made of its first three characters of a specified string. If the length of the string is less than 3 then return the original string.
 # Sample function and result :
@@ -1916,6 +1920,14 @@
 #         if x not in a:
 #             a.append(x)
 # print(a)
+##OR
+# def fun1(l):
+#     for item in l:
+#         if l.count(item) > 1:
+#             l.remove(item)
+#     print(l)
+# l = [1, 2, 3, 12, 3, 2, 2]
+# fun1(l)
 
 # Write a Python program to find the list of words that are longer than n from a given list of words.
 # def fun1(l):
@@ -1990,6 +2002,22 @@
 #     print(l)
 # l = [0,1,0,3,12]
 # fun1(l)
+## OR
+# def nonzero(l):
+#     a = []
+#     # append all non zero
+#     for item in l:
+#         if item != 0:
+#             a.append(item)
+#
+#     # then append all zero
+#     for item in l:
+#         if item == 0:
+#             a.append(item)
+#
+#     print(a)
+# l = [0, 1, 0, 3, 12]
+# nonzero(l)
 
 ###Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
 # Input: [3,1,2,4]
@@ -2080,8 +2108,40 @@
 #     print(full1, full2)
 # s = "a1b2"
 # fun1(s)
+# ## OR
+# def transform(s):
+#     # all letter lowercase
+#     lower = s.lower()
+#     print(lower)
+#
+#     # all letter uppercase
+#     upper = s.upper()
+#     print(upper)
+#
+#     # left half uppercase + right half lowercase
+#     m = len(s) // 2
+#     # print(m)
+#     left = s[0:m]
+#     right = s[m:len(s)]
+#     upperlower = left.upper() + right.lower()
+#     print(upperlower)
+#
+#     # right half uppercase + lft half uppercase
+#     lowerupper = left.lower() + right.upper()
+#     print(lowerupper)
+#
+#     l = []
+#     l.append(lower)
+#     l.append(upper)
+#     l.append(upperlower)
+#     l.append(lowerupper)
+#     print(l)
+# s = "a1b2"
+# transform(s)
 
-###Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters. Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
+###Given a string s which consists of lowercase or uppercase letters,
+# return the length of the longest palindrome that can be built with those letters.
+# Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
 # Input: s = "abccccdd"
 # Output: 7
 # Explanation:
@@ -2119,7 +2179,43 @@
 # print(len(l1))
 # s = "abccccdd"
 # fun1(s)
-
+## OR
+# def funpalindrome(s):
+#     l = list(s)
+#     print(l)
+#     # find letters that have count 2
+#     count2 = []
+#     for item in l:
+#         if l.count(item) >= 2:
+#             if item not in count2:
+#                 count2.append(item)
+#     print(count2)
+#
+#     # find letters that are unique, i.e. count is 1
+#     unique = []
+#     for item in l:
+#         if l.count(item) < 2:
+#             if item not in unique:
+#                 unique.append(item)
+#
+#     print(unique)
+#
+#     # Now create a longest palindrome and check length
+#     palindrome = []
+#     for item in count2:
+#         palindrome.append(item)
+#
+#     count2.reverse()
+#     for item in count2:
+#         palindrome.append(item)
+#     print(palindrome)
+#
+#     mid = len(palindrome) // 2
+#     palindrome.insert(mid, unique[0])
+#     print(palindrome)
+#     print(len(palindrome))
+# s = "ababDefe"
+# funpalindrome(s)
 
 ### Given a string S of lowercase letters, a duplicate removal consists of choosing two adjacent and equal letters, and removing them.
 # We repeatedly make duplicate removals on S until we no longer can. Return the final string after all such duplicate removals have been made.
@@ -2154,5 +2250,33 @@
 #                     break
 #
 #         return ''.join(l)
-
+# OR
+# def fun1(s):
+#     l = list(s)
+#     print(l)
+#
+#     # find the letters that hv count more than 1
+#     dup = []
+#     for item in l:
+#         if item not in dup:
+#             if l.count(item) > 1:
+#                 dup.append(item)
+#     print(dup)
+#     # find the adjacent and equal letter and remove
+#     for item in dup:
+#         i = l.index(item)
+#         if l[i] == l[i + 1]:
+#             del l[i]
+#             del l[i]
+#     print(l)
+#
+#     for item in dup:
+#         if item in l:
+#             i = l.index(item)
+#             if l[i] == l[i + 1]:
+#                 del l[i]
+#                 del l[i]
+#     print(l)
+# s = "baabcdee"
+# fun1(s)
 
