@@ -52,7 +52,7 @@
 # fun1(n)
 
 ##Write Python code to check the given sequence is a palindrome or not?
-#mom, madam, nurses run
+#mom, madam,  nurses run, do geese see god
 
 # class test():
 #     def palindrome(self):
@@ -74,7 +74,7 @@
 ##OR
 # def checkpalindrome(s):
 
-#     # assuning the input is string
+#     # assuming the input is string
 #     rev_s = s[ : : -1]
 #     print(rev_s)
 #     if s == rev_s:
@@ -83,7 +83,7 @@
 #         print("No not a palindrome")
 # s = "mom"
 # checkpalindrome(s)
-## OR:
+## OR: for palindrome phrases ex=  nurses run, do geese see god
 # def checkpalindrome(s):
 #     fs = s.replace(" ", "")
 #     rev_fs = fs[:: -1]
@@ -106,7 +106,7 @@
 # a = data()
 # a.fun1(l)
 
-### Write Python code to sort a numerical dataset without using sort function.
+### Write Python code to sort a numerical dataset without using sort function.[selection sort]
 #
 # def sortinglist(l):
 #     # assuming its list and we are doing ascending sort
@@ -154,13 +154,22 @@
 # a = test()
 # a.funNtimes(s, n)
 
-##Check the memory usage of  an object
+##Check the memory size/usage of an object
 # import sys
 #
 # def size():
 #     d = "ghitm"
 #     print(sys.getsizeof(d))
 # size()
+
+### Check memory location:
+# x = 10
+# y = 10
+# print(id(x))
+# print(id(y) # both will hv same id as the value assigned is same
+# z = 20
+# print(hex(id(z)))  # gives memory location of z
+
 
 ## Find the most frequent/recurring value in a list
 # def fun1(l):
@@ -485,7 +494,7 @@
 #
 #     r = json.loads(address_response.text)
 #     OR
-#     r = json.dumps(address_response.text) ## if address_response.text is string
+#     r = json.dumps(address_response.text) ## if address_response.text is not string, converts to string
 #
 #     ans = r[0]['components']['state_abbreviation']
 #
@@ -667,18 +676,11 @@
 
 # ####Q==> Create a new dictionary by extracting the following keys from a given dictionary
 ## keys to extract ["name", "salary"]
-## sampleDict = {
-##   "name": "Kelly",
-##   "age":25,
-##   "salary": 8000,
-##   "city": "New york"
-## }
 # sampleDict = {
 #   "name": "Kelly",
 #   "age":25,
 #   "salary": 8000,
 #   "city": "New york"
-# }
 #
 # new = {}
 #
