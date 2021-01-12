@@ -299,7 +299,7 @@ if __name__ == '__main__':
 ## Returns a character which is alphabetically the lowest character in the string, ex a is lowest among all
     # str = "jkjkj"
     # min(str)
-## replaces all occurrences of old substring in string with new string
+## replaces all occurrences of old substring in string with new string, str.replace('old','new',count)
     # str = "hello world"
     # str.replace("hell","mell") , result will be 'mello world'
 ## find ASCII code of a character : ord(‘char’)
@@ -484,5 +484,5 @@ if __name__ == '__main__':
 ### Summary:
 # LIST [sort,sorted(l,reverse = True), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index,reverse, list(reversed(seq_list)) , max, min, sum, clear(),len,sort, sorted(list), sorted(list,reverse = True)]
 # string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len, rindex(), split(), rsplit()]
-# dict [ list(dict1.keys()), list(dict1.values(), del, pop(key), items(), clear(), dict(zip(list1,list2)) , dict1.update(dict2) ]
+# dict [ list(dict1.keys()), list(dict1.values()), del, pop(key), items(), clear(), dict(zip(list1,list2)) , dict1.update(dict2) ]
 
