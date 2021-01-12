@@ -419,7 +419,7 @@
 #     def test_split(self):
 #         s = 'hello world'
 #         assert s.split(2) == ['hello', 'world']
-#         # s.split should throw when the separator is not a string
+#         # s.split should throw error when the separator is not a string
 #         with pytest.raises(TypeError):
 #             pass
 
