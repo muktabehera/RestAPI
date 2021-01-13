@@ -482,7 +482,8 @@ if __name__ == '__main__':
 
 
 ### Summary:
-# LIST [sort,sorted(l,reverse = True), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index,reverse, list(reversed(seq_list)) , max, min, sum, clear(),len,sort, sorted(list), sorted(list,reverse = True)]
+# LIST [sort,sorted(l,reverse = True), reverse , list(reversed(seq_list)), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index, max, min, sum, clear(),len]
 # string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len, rindex(), split(), rsplit()]
 # dict [ list(dict1.keys()), list(dict1.values()), del, pop(key), items(), clear(), dict(zip(list1,list2)) , dict1.update(dict2) ]
+# tuple [count,index, sorted(t) --> gives list , tuple(reversed(t)), list(reversed(t)) ]
 
