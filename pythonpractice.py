@@ -287,7 +287,7 @@ if __name__ == '__main__':
     ## list = ['1','2','3','4'] or list = ['a','b']
         # l = ' '.join(list)       , result will be '1 2 3 4'
     ## dict = {"name": "John", "country": "Norway"}
-        # h = 'test'.join(dict)    , result will be 'nametestcountry'
+        # h = 'test'.join(dict)    , result will be 'namecountry'
 ## Remove white spaces
     # s1 = "  jkjkj  "
     # s1.lstrip() , removes white spaces from left
@@ -485,5 +485,5 @@ if __name__ == '__main__':
 # LIST [sort,sorted(l,reverse = True), reverse , list(reversed(seq_list)), remove, del, pop(), count , pop(index), append, extend,insert(index,value), index, max, min, sum, clear(),len]
 # string [count,index,replace,find,lower(),upper(),capitalize(),title(), swapcase(),max,min,len, rindex(), split(), rsplit()]
 # dict [ list(dict1.keys()), list(dict1.values()), del, pop(key), items(), clear(), dict(zip(list1,list2)) , dict1.update(dict2) ]
-# tuple [count,index, sorted(t) --> gives list , tuple(reversed(t)), list(reversed(t)) ]
+# tuple [len, count, index, sorted(t) --> gives list , tuple(reversed(t)), list(reversed(t)), tuple[1:3], tuple*2 ]
 
