@@ -902,6 +902,15 @@
 # d2 = {3: 30, 4: 40}
 # d3 = {5: 50, 6: 60}
 # print(con(d1, d2, d3))
+### OR
+# dic1={1:10, 2:20}
+# dic2={3:30, 4:40}
+# dic3={5:50,6:60}
+# d = {}
+# d.update(dic1)
+# d.update(dic2)
+# d.update(dic3)
+# print(d)
 
 ### Write a Python script to check whether a given key already exists in a dictionary
 
@@ -2183,7 +2192,7 @@
 # def funpalindrome(s):
 #     l = list(s)
 #     print(l)
-#     # find letters that have count 2
+#     # find letters that have count >= 2
 #     count2 = []
 #     for item in l:
 #         if l.count(item) >= 2:
