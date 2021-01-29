@@ -1,5 +1,5 @@
 ## Write a program to display the Fibonacci sequence in Python?
-# 0,1,1,2,3,5,8,13 etc
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] etc
 #class practice():
     # def fibonacci(self,n):
     #     #n = 10
@@ -23,7 +23,7 @@
 #a = practice()
 #a.fibonacci(10)
 
-##Given number is prime number or not. [ note - 2 is divisible by 2 and is still prime]
+##Given number is prime number or not. [ note: 2 is divisible by 2 and is still prime]
 # Note: A number divisible by 1 and itself only is prime. So if it is divisible by any other number its not prime.
 # def testPrime(n):
 #     # check if n is greater than 2:
@@ -249,6 +249,11 @@
     # 1. Tuple has indexes like list, values can be found using index tuple[2]
     # 2. Tuple can be sliced, tuple[1:3]
     # 3. print(tuple * 2)
+    # 4. len(tuple)
+    # 5. tuple.count('a')
+    # 6. tuple.index('a')
+    # 7. list(reversed(tuple))
+    # 8. sorted(tuple)
 
 ## import random
 # d = random.randrange(0,100)  # random Integer from 0 to 99 inclusive
