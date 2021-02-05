@@ -668,12 +668,14 @@
 # print(target(l, t))
 # OR
 # def fun1(l,t):
+#     a = []
 #     for x in l:
-#         a = []
+#
 #         for y in l:
 #             if x != y:
 #                 if x + y == t:
 #                     a.extend([x,y])
+#         break
 #     print(a)
 # l = [14,13, 6, 4, 1,2]
 # t = 8
@@ -2294,3 +2296,133 @@
 # s = "baabcdee"
 # fun1(s)
 
+# You have to rotate the image in-place, which means you have to modify the input 2D matrix directly.
+# Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+# Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+# Input: matrix = [[1,2],[3,4]]
+# Output: [[3,1],[4,2]]
+# Input: matrix = [[1,2],[3,4]]
+# Output: [[3,1],[4,2]]
+
+# def fun1(l):
+#     l.reverse()  # [[15, 14, 12, 16], [13, 3, 6, 7], [2, 4, 8, 10], [5, 1, 9, 11]]
+#     newl = []
+#
+#     for item in zip(*l):
+#         itemlist = list(item)
+#         newl.append(itemlist)
+#
+#     print(newl)  # [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+#
+# l = [[5, 1, 9, 11], [2, 4, 8, 10], [13, 3, 6, 7], [15, 14, 12, 16]]
+# fun1(l)
+
+### Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+
+# Each row must contain the digits 1-9 without repetition.
+# Each column must contain the digits 1-9 without repetition.
+# Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+# Note:
+
+# A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+# Only the filled cells need to be validated according to the mentioned rules.
+
+# Input: board =
+# [["5","3",".",".","7",".",".",".","."]
+# ,["6",".",".","1","9","5",".",".","."]
+# ,[".","9","8",".",".",".",".","6","."]
+# ,["8",".",".",".","6",".",".",".","3"]
+# ,["4",".",".","8",".","3",".",".","1"]
+# ,["7",".",".",".","2",".",".",".","6"]
+# ,[".","6",".",".",".",".","2","8","."]
+# ,[".",".",".","4","1","9",".",".","5"]
+# ,[".",".",".",".","8",".",".","7","9"]]
+# Output: true
+# Input: board =
+# [["8","3",".",".","7",".",".",".","."]
+# ,["6",".",".","1","9","5",".",".","."]
+# ,[".","9","8",".",".",".",".","6","."]
+# ,["8",".",".",".","6",".",".",".","3"]
+# ,["4",".",".","8",".","3",".",".","1"]
+# ,["7",".",".",".","2",".",".",".","6"]
+# ,[".","6",".",".",".",".","2","8","."]
+# ,[".",".",".","4","1","9",".",".","5"]
+# ,[".",".",".",".","8",".",".","7","9"]]
+# Output: false
+
+# def fun1(l):
+#     result = True
+#
+#     # check rows , verify 1-9 and no repeatition
+#     newl = []
+#     for item in l:
+#         a = []
+#         for ele in item:
+#             if ele != '.':
+#                 intele = int(ele)
+#                 a.append(intele)
+#         newl.append(a)
+#     # print(newl)
+#     for item in newl:
+#         for ele in item:
+#             if ele in range(1, 10):
+#                 if item.count(ele) == 1:
+#                     result = True
+#                 else:
+#                     result = False
+#                     break
+#             elif ele not in range(1, 10):
+#                 result = False
+#                 break
+#
+#     # check column , verify 1-9 and no repeatition
+#     column = []
+#     for item in zip(*l):
+#         column.append(item)
+#     # print(column)
+#
+#     newcolumn = []
+#     for item in column:
+#         b = []
+#         for ele in item:
+#             if ele != '.':
+#                 b.append(ele)
+#         newcolumn.append(b)
+#         # print(newcolumn)
+#
+#     for item in newcolumn:
+#         for ele in item:
+#             if ele in range(1, 10):
+#                 if item.count(ele) == 1:
+#                     result = True
+#                 else:
+#                     result = False
+#                     break
+#             elif ele not in range(1, 10):
+#                 result = False
+#                 break
+#
+#     # result
+#     if result == False:
+#         print("Not a valid sudoku")
+#
+#     else:
+#         print("It is a valid sudoku")
+#
+# l = [["8", "3", ".", ".", "7", ".", ".", ".", "."]
+#     , ["6", ".", ".", "1", "9", "5", ".", ".", "."]
+#     , [".", "9", "8", ".", ".", ".", ".", "6", "."]
+#     , ["8", ".", ".", ".", "6", ".", ".", ".", "3"]
+#     , ["4", ".", ".", "8", ".", "3", ".", ".", "1"]
+#     , ["7", ".", ".", ".", "2", ".", ".", ".", "6"]
+#     , [".", "6", ".", ".", ".", ".", "2", "8", "."]
+#     , [".", ".", ".", "4", "1", "9", ".", ".", "5"]
+#     , [".", ".", ".", ".", "8", ".", ".", "7", "9"]]
+#
+# fun1(l)
+
+# Apple : quo below (input is string, expected output is integer)
+# exp = "1-5+8-4+9" -->
+# exp = "100+700+500" --> 1300
+# exp = "20-67-7-6-8" -->
+# exp = "3-7+2-9+5" -->
