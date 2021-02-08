@@ -2422,7 +2422,29 @@
 # fun1(l)
 
 # Apple : quo below (input is string, expected output is integer)
-# exp = "1-5+8-4+9" -->
+# exp = "1-5+8-4+9" --> 9
 # exp = "100+700+500" --> 1300
-# exp = "20-67-7-6-8" -->
-# exp = "3-7+2-9+5" -->
+# exp = "20-67+7-6+8" --> -38
+# exp = "3-7+2-9+5" --> -6
+# def funexpression(e):
+#     l = e.split('+')
+#
+#     newl = []
+#     for i in range(0, len(l)):
+#         item = l[i]
+#         if item.find('-') == -1:
+#             int_item = int(item)
+#             newl.append(int_item)
+#         elif item.find('-') != -1:
+#             item_list = item.split('-')
+#             sub = int(item_list[0])
+#             for i in range(1, len(item_list)):
+#                 sub = sub - int(item_list[i])
+#             newl.append(sub)
+#
+#     res = sum(newl)
+#     print(res)
+#
+#
+# e = "1-5+8-4+9"
+# funexpression(e)
