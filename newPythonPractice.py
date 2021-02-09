@@ -2448,3 +2448,54 @@
 #
 # e = "1-5+8-4+9"
 # funexpression(e)
+
+#### Read a file, find all ip/phone(###-###-#### / ###.###.###.###) numbers from the file:
+import re
+# f = open("logtest.log", "r")
+# h = f.readlines()
+# # print(f.read())
+# # print(type(f))
+
+# regex pattern for IP addresses
+# ipregex = "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"  # or "\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}"
+# l = []
+# for item in h:
+#     # print(item)
+#     try:
+#         a = re.search(ipregex, item).group(0)
+#         l.append(a)
+#     except:
+#         pass
+#
+# print(l)
+#
+# # regex pattern for phone num
+# phoneregex = "\w{3}-\w{3}-\w{4}"
+# m = []
+# for item in h:
+#     try:
+#         b = re.search(phoneregex, item).group(0)
+#         m.append(b)
+#     except:
+#         pass
+# print(m)
+
+### Given a number string , find if it is in valid phone format i.e. ###-###-#### , ##########, ###.###.####, (###)###-####
+# import re
+#
+# phoneno = "213-856-8909"
+# regex = "\w{3}-\w{3}-\w{4}"
+#
+# # phoneno = "5161112222"
+# # regex = "\w{3}\w{3}\w{4}"
+#
+# phoneno = "213.856.8909"
+# regex = "\w{3}.\w{3}.\w{4}"
+#
+# # phoneno = "(516)111-2222"
+# # regex = "\(\w{3}\)\w{3}-\w{4}"
+#
+# if re.search(regex,phoneno):
+#     print("valid")
+# else:
+#     print("invalid")
