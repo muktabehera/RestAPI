@@ -1982,8 +1982,18 @@
 #     print(l)
 # l = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow', 'orange']
 # fun1(l)
+#OR
+# def fun1(l):
+#     delete = []
+#     for i in (0, 4, 5):
+#         delete.append(l[i])
+#     for item in delete:
+#         l.remove(item)
+#     print(l)
+# l = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# fun1(l)
 
-# l = [3,5,4,1], find misiing i.e. 2
+### l = [3,5,4,1], find misiing i.e. 2
 # l = [3,5,4,1,0]
 # for i in range(0,6):
 #     if i not in l:
@@ -2499,3 +2509,12 @@ import re
 #     print("valid")
 # else:
 #     print("invalid")
+
+### Open a file called "number.txt". Write 200 random intigers between 1 and 100. Remember to close the file
+# import random
+#
+# s = open("number.txt", "w")
+# for i in range(0,200):
+#     a = random.randint(1,100)
+#     print(a)
+# s.close()
