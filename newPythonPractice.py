@@ -1902,6 +1902,16 @@
 #     print(c)
 # l = ['abc', 'xyz', 'aba', '1221']
 # fun1(l)
+#OR
+# def fun1(l):
+#     c = 0
+#     for item in l:
+#         if len(item) >= 2:
+#             if item[0] == item[-1]:
+#                 c = c + 1
+#     print(c)
+# l = ['abc', 'xyz', 'aba', '1221']
+# fun1(l)
 
 ###  Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
 # Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
@@ -1928,7 +1938,7 @@
 
 ### Write a Python program to remove duplicates from a list.
 # l = [1,2,3,12,3,2,2]
-# a = []
+# a = [1, 2, 3, 12] #answer
 # for x in l:
 #     if l.count(x) == 1:
 #         a.append(x)
@@ -2242,6 +2252,23 @@
 #     print(len(palindrome))
 # s = "ababDefe"
 # funpalindrome(s)
+# OR
+# def fun1(s):
+#     d = {}
+#        for item in s:
+#         if s.count(item) % 2 == 0:
+#             d[item] = s.count(item)
+#         elif s.count(item) % 2 != 0:
+#             c = s.count(item) - 1
+#             if c != 0:
+#                 d[item] = c
+#     print(d)
+#     s = 0
+#     for key in d:
+#         s = s + d[key]
+#     print(s + 1)
+# s = "abccccdd"
+# fun1(s)
 
 ### Given a string S of lowercase letters, a duplicate removal consists of choosing two adjacent and equal letters, and removing them.
 # We repeatedly make duplicate removals on S until we no longer can. Return the final string after all such duplicate removals have been made.
