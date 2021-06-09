@@ -106,7 +106,7 @@
 # a = data()
 # a.fun1(l)
 
-### Write Python code to sort a numerical dataset without using sort function.[selection sort]
+### Write Python code to sort a numerical dataset without using sort function.[use selection sort]
 #
 # def sortinglist(l):
 #     # assuming its list and we are doing ascending sort
