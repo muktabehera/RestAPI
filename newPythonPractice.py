@@ -147,7 +147,8 @@
 #         # print(m)
 #         for i in range(0, n):
 #             print(s)
-#
+#             print(s + '\n') # with new line
+#             print(s, end=" ") # without new line and with space only
 #
 # s = "hello"
 # n = 10
