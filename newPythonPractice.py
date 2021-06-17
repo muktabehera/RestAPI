@@ -139,7 +139,7 @@
 # a = test("rosy","111 e lane")
 # a.print()
 
-## Print a string N times.
+## Print a string N times...
 # class test():
 #
 #     def funNtimes(self, s, n):
